@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: OpenMesa_production
-  username: OpenMesa
-  password: <%= ENV["OPENMESA_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
