@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import LoginForm from "./LoginForm";
 import { Modal } from "../../context/Modal";
 
 const LoginFormModal = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
   
   return (
     <>

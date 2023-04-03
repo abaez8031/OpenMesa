@@ -6,7 +6,8 @@ const ProfileButton = ({ user }) => {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
 
-  const openMenu = () => {
+  const openMenu = (e) => {
+    e.preventDefault();
     if (showMenu) return;
     setShowMenu(true);
   };

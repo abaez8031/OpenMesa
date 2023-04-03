@@ -1,10 +1,11 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
 
-function Navigation() {
+const  Navigation = () => {
   const sessionUser = useSelector(state => state.session.user);
   let sessionLinks;
   if (sessionUser) {

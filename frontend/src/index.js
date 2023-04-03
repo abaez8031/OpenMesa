@@ -13,7 +13,13 @@ import { ModalProvider } from './context/Modal';
 const store = configureStore();
 const root = createRoot(document.getElementById("root"))
 
-function Root() {
+if (process.env.NODE_ENV !== 'production') {
+  window.store = store;
+  window.csrfFetch = csrfFetch;
+  window.sessionActions = sessionActions;
+}
+
+const Root = () => {
   return (
     <ModalProvider>
     <Provider store={store}>
@@ -32,12 +38,6 @@ const renderApplication = () => {
        <Root />
      </React.StrictMode>
   )
-}
-
-if (process.env.NODE_ENV !== 'production') {
-  window.store = store;
-  window.csrfFetch = csrfFetch;
-  window.sessionActions = sessionActions;
 }
 
 if (
