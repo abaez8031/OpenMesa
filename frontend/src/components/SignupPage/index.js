@@ -99,7 +99,7 @@ const SignupFormPage = () => {
           required
         />
       </label>
-      <label for="primary_dining_loc">Primary Dining Location</label>
+      <label htmlFor="primary_dining_loc">Primary Dining Location</label>
         <select 
           id="primary_dining_loc" 
           value={primaryDiningLocation}

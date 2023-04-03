@@ -1,10 +1,13 @@
 import { Route, Switch } from 'react-router-dom';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupPage';
+import Navigation from './components/Navigation';
 
 function App() {
 
   return (
+    <>
+    <Navigation/>
     <Switch>
       <Route exact path="/login">
         <LoginFormPage />
@@ -15,6 +18,7 @@ function App() {
       <Route exact path="/">
       </Route>
     </Switch>
+    </>
   );
 }
 
