@@ -2,10 +2,10 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
+import LoginFormModal from '../LoginFormModal';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
-
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
@@ -14,7 +14,7 @@ function Navigation() {
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login">Log In</NavLink>
+        <LoginFormModal/>
         <NavLink to="/signup">Sign Up</NavLink>
       </>
     );

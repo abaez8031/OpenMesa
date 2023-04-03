@@ -4,7 +4,7 @@ import * as sessionActions from '../../store/session';
 
 const ProfileButton = ({ user }) => {
   const dispatch = useDispatch();
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
 
   const openMenu = () => {
     if (showMenu) return;
@@ -31,12 +31,11 @@ const ProfileButton = ({ user }) => {
   return (
     <>
       <button onClick={openMenu}>
-        <i class="fa-solid fa-user"/>
+        <i className="fa-solid fa-user"/>
       </button>
       {showMenu && (
         <ul className="profile-dropdown">
-          <li>{user.username}</li>
-          <li>{user.email}</li>
+          <li>{user.emailAddress}</li>
           <li>
             <button onClick={logout}>Log Out</button>
           </li>
