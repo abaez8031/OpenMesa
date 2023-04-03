@@ -9,6 +9,7 @@ const ProfileButton = ({ user }) => {
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);
+    console.log("open menu")
   };
   
   useEffect(() => {
@@ -16,11 +17,15 @@ const ProfileButton = ({ user }) => {
 
     const closeMenu = () => {
       setShowMenu(false);
+      console.log("close menu")
     };
 
     document.addEventListener('click', closeMenu);
   
-    return () => document.removeEventListener("click", closeMenu);
+    return () => {
+      document.removeEventListener('click', closeMenu)
+      console.log("remove event listener")
+    };
   }, [showMenu]);
 
   const logout = (e) => {
