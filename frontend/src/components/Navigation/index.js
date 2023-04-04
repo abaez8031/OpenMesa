@@ -5,6 +5,7 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupPage/';
+import openMesaLogo from "./pngwing.com.png"
 
 
 const  Navigation = () => {
@@ -26,9 +27,7 @@ const  Navigation = () => {
 
   return (
     <ul className='nav-bar'>
-      <li>
-        <NavLink exact to="/">Home</NavLink>
-      </li>
+      <NavLink exact to="/" className="openmesa-nav-link"> <img className='openmesa-logo' src={openMesaLogo}></img> <span className="openmesa-text">OpenMesa</span></NavLink>
         {sessionLinks}
     </ul>
   );

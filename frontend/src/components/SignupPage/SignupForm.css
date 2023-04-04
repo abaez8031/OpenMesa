@@ -50,4 +50,5 @@ input:focus {
   text-decoration: none;
   text-align: center;
   border: .8px groove rgb(192, 192, 192);
+  cursor: pointer;
 }
