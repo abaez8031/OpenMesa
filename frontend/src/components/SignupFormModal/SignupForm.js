@@ -42,9 +42,9 @@ const SignupForm = () => {
   return (
     <>
     <form onSubmit={handleSubmit}>
-      <ul>
+      {/* <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
+      </ul> */}
       
         <input
         placeholder="Email Address"
@@ -53,6 +53,10 @@ const SignupForm = () => {
           onChange={(e) => setEmailAddress(e.target.value)}
           required
         />
+        {errors.includes("Email address is invalid") && (
+          <p className="error-messages">* Email address is invalid</p>
+        )}
+        
         <input
           placeholder="Password"
           type="password"
@@ -60,6 +64,9 @@ const SignupForm = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        {errors.includes("Password is too short (minimum is 6 characters)") && (
+          <p className="error-messages">* Password is too short (minimum is 6 characters)</p>
+        )}
         <input 
           placeholder="First Name"
           type="text"
@@ -81,6 +88,9 @@ const SignupForm = () => {
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
         />
+        {errors.includes("Phone number is not a number") && (
+          <p className="error-messages">* Phone number is not a number</p>
+        )}
         <select 
           id="primary_dining_loc" 
           value={primaryDiningLocation}
@@ -90,6 +100,9 @@ const SignupForm = () => {
           <option hidden>Select a Primary Dining Location</option>
           <option>New York City</option>
           </select>
+          {errors.includes("Primary dining location can't be blank") && (
+          <p className="error-messages">*Primary dining location can't be blank</p>
+        )}
 
       <button type="submit">Sign Up</button>
     <button className="demo-login" onClick={loginDemoUser}> Login Demo User</button>

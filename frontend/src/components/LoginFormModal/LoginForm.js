@@ -33,9 +33,11 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <ul>
+      {/* <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
+      </ul> */}
+
+      {errors.length > 0 && (<p className="error-messages">* {errors[0]}</p>)}
         <input
           placeholder="Email Address"
           type="text"
