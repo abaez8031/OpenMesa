@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
-import SignupFormModal from '../SignupPage/';
+import SignupFormModal from '../SignupFormModal';
 import openMesaLogo from "./pngwing.com.png"
 
 
