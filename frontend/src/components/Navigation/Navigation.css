@@ -30,11 +30,45 @@
 
 .profile-icon {
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border: .8px groove rgb(192, 192, 192);
 }
 
-/* .profile-dropdown {
+.profile-dropdown {
+  position: absolute;
+  width: 316px;
+  border-radius: 5px;
+  border: .8px groove rgb(192, 192, 192);
+  padding: 5px;
+  top: 85px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  z-index: 1;
+}
 
-} */
+.profile-dropdown p {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile-dropdown li {
+  padding: 10px;
+}
+
+.profile-dropdown li:hover {
+  background-color: 		rgb(240,240,240);
+}
+
+.profile-dropdown :last-child {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.signout-btn {
+  color: #D10000
+}

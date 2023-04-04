@@ -40,9 +40,10 @@ const ProfileButton = ({ user }) => {
       </button>
       {showMenu && (
         <ul className="profile-dropdown">
-          <li>{user.emailAddress}</li>
+          <p>Hello, {user.firstName}!</p>
+          <li>My Profile</li>
           <li>
-            <button onClick={logout}>Sign Out</button>
+            <h2 className="signout-btn" onClick={logout}>Sign Out</h2>
           </li>
         </ul>
       )}
