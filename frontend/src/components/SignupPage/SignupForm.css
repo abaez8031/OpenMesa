@@ -5,12 +5,12 @@ form {
   align-items: center;
   height: 760px;
   width: 460px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
-button[type="submit"] {
-  background-color: #D10000;
-  color: #FFFFFF;
+button[type="submit"], .demo-login {
+  background-color: #d10000;
+  color: #ffffff;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
@@ -19,23 +19,35 @@ button[type="submit"] {
   margin-left: 10%;
   margin-right: 10%;
   height: 40px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-input, select {
-  border: 1px solid #CCCCCC;
+input,
+select {
+  border: 1px solid #cccccc;
   border-radius: 4px;
   padding: 10px;
   font-size: 16px;
   color: #333333;
   width: 80%;
   box-sizing: border-box;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 10px;
 }
 
 input:focus {
-  border-color: #007DCC;
+  border-color: #007dcc;
+}
+
+.sign-in-btn {
+  padding: 8px 12px;
+  background-color: transparent;
+  color: black;
+  border-radius: 2px;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  border: .8px groove rgb(192, 192, 192);
 }

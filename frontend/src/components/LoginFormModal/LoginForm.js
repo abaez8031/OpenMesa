@@ -8,6 +8,9 @@ const LoginForm = () => {
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  const loginDemoUser = () => {
+    dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}))
+  }
 
   
   const handleSubmit = (e) => {
@@ -47,6 +50,7 @@ const LoginForm = () => {
           required
         />
       <button type="submit">Log In</button>
+      <button className="demo-login" onClick={loginDemoUser}> Login Demo User</button>
     </form>
   );
 }

@@ -8,7 +8,7 @@ form {
   background-color: #F7F7F7;
 }
 
-button[type="submit"] {
+button[type="submit"], .demo-login {
   background-color: #D10000;
   color: #FFFFFF;
   text-align: center;
@@ -21,6 +21,7 @@ button[type="submit"] {
   height: 40px;
   cursor:pointer;
   border: none;
+  margin-top: 10px;
 }
 
 input, select {
@@ -39,4 +40,16 @@ input, select {
 
 input:focus {
   border-color: #007DCC;
+}
+
+.sign-up-btn {
+  padding: 8px 12px;
+  margin: 0 8px;
+  background-color: #247f9e;
+  color: white;
+  border-radius: 2px;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  border: .8px groove rgb(192, 192, 192);
 }

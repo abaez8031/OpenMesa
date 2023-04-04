@@ -6,7 +6,6 @@ import './SignupForm.css';
 
 const SignupForm = () => {
   const dispatch = useDispatch();
-  const sessionUser = useSelector(state => state.session.user);
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -14,11 +13,13 @@ const SignupForm = () => {
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [primaryDiningLocation, setPrimaryDiningLocation] = useState("")
+  const loginDemoUser = () => {
+    dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}))
+  }
 
 
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,6 +42,7 @@ const SignupForm = () => {
   };
 
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
@@ -99,7 +101,9 @@ const SignupForm = () => {
           </select>
 
       <button type="submit">Sign Up</button>
+    <button className="demo-login" onClick={loginDemoUser}> Login Demo User</button>
     </form>
+    </>
   );
 }
 

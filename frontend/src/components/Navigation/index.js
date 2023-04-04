@@ -17,8 +17,8 @@ const  Navigation = () => {
   } else {
     sessionLinks = (
       <>
-        <LoginFormModal/>
-        <SignupFormModal/>
+        <li><SignupFormModal/></li>
+        <li><LoginFormModal/></li>
         
       </>
     );
@@ -28,8 +28,8 @@ const  Navigation = () => {
     <ul className='nav-bar'>
       <li>
         <NavLink exact to="/">Home</NavLink>
-        {sessionLinks}
       </li>
+        {sessionLinks}
     </ul>
   );
 }
