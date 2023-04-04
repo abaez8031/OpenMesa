@@ -45,68 +45,56 @@ const SignupForm = () => {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      <label>
-        Email
+      
         <input
+        placeholder="Email Address"
           type="text"
           value={emailAddress}
           onChange={(e) => setEmailAddress(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Password
         <input
+          placeholder="Password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Confirm Password
         <input
+          placeholder="Confirm Password"
           type="password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
-      </label>
-      <label>
-        First Name
         <input 
+          placeholder="First Name"
           type="text"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Last Name
         <input 
+          placeholder="Last Name"
           type="text"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Phone Number
         <input 
+          placeholder="Phone Number"
           type="tel"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
         />
-      </label>
-      <label htmlFor="primary_dining_loc">Primary Dining Location</label>
         <select 
           id="primary_dining_loc" 
           value={primaryDiningLocation}
           onChange={(e) => setPrimaryDiningLocation(e.target.value)}
           required
           > 
-          <option>Select a Primary Dining Location</option>
+          <option hidden>Select a Primary Dining Location</option>
           <option>New York City</option>
           </select>
 

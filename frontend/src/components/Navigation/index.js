@@ -25,7 +25,7 @@ const  Navigation = () => {
   }
 
   return (
-    <ul>
+    <ul className='nav-bar'>
       <li>
         <NavLink exact to="/">Home</NavLink>
         {sessionLinks}

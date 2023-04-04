@@ -32,24 +32,20 @@ const LoginForm = () => {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      <label>
-        Email
         <input
+          placeholder="Email Address"
           type="text"
           value={emailAddress}
           onChange={(e) => setEmailAddress(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Password
         <input
+          placeholder="Password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      </label>
       <button type="submit">Log In</button>
     </form>
   );
