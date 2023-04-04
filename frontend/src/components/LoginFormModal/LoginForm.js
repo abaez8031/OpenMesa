@@ -8,6 +8,7 @@ const LoginForm = () => {
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  
   const loginDemoUser = () => {
     dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}))
   }

@@ -7,11 +7,12 @@
   background-color: #fff;
   height: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .openmesa-logo {
-  height: 120px;
-  width: 160px;
+  height: 81px;
+  width: 108px;
 }
 
 .openmesa-nav-link {
@@ -22,8 +23,8 @@
 .openmesa-text {
   font-size: 25px;
   position: absolute;
-  top: 50px;
-  left: 130px;
+  top: 30px;
+  left: 90px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
 }
@@ -52,21 +53,18 @@
 .profile-dropdown p {
   margin-top: 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .profile-dropdown li {
   padding: 10px;
+  cursor: pointer;
 }
 
 .profile-dropdown li:hover {
   background-color: 		rgb(240,240,240);
-}
-
-.profile-dropdown :last-child {
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 .signout-btn {

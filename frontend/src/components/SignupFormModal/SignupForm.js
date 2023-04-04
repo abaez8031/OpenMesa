@@ -8,22 +8,21 @@ const SignupForm = () => {
   const dispatch = useDispatch();
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [primaryDiningLocation, setPrimaryDiningLocation] = useState("")
+  const [errors, setErrors] = useState([]);
   const loginDemoUser = () => {
     dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}))
   }
 
 
-  const [errors, setErrors] = useState([]);
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === confirmPassword) {
+    {
       setErrors([]);
       return dispatch(sessionActions.signup({ emailAddress, password, firstName, lastName, phoneNumber, primaryDiningLocation }))
         .catch(async (res) => {
@@ -38,9 +37,8 @@ const SignupForm = () => {
         else setErrors([res.statusText]);
       });
     }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
   };
-
+  
   return (
     <>
     <form onSubmit={handleSubmit}>
@@ -60,13 +58,6 @@ const SignupForm = () => {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <input
-          placeholder="Confirm Password"
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
         <input 
