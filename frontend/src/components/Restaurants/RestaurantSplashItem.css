@@ -1,0 +1,12 @@
+.splash-rest-item {
+  width: 236px;
+  height: 322px;
+  display: flex;
+  border: 2px solid red;
+  display: inline-block;
+}
+
+.splash-rest-info {
+  text-align: center;
+  
+}

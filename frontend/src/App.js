@@ -4,6 +4,7 @@ import ReservationSearch from "./components/ReservationSearch"
 import UserShow from './components/UserShow';
 import RestaurantsIndex from './components/Restaurants/RestaurantsIndex';
 import RestaurantShow from './components/Restaurants/RestaurantShow';
+import RestaurantsSplashPage from "./components/Restaurants/RestaurantsSplashPage"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Switch>
       <Route exact path="/">
         <ReservationSearch/>
+        <RestaurantsSplashPage/>
       </Route>
       <Route exact path="/users/:userId">
         <UserShow />
