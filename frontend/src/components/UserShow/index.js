@@ -7,6 +7,9 @@ const UserShow = () => {
   if(!sessionUser || sessionUser.id != userId) return <Redirect to="/"/>
   return (
     <div>
+      <li>{sessionUser.firstName}</li>
+      <li>{sessionUser.lastName}</li>
+      <li>{sessionUser.phoneNumber}</li>
       <li>{sessionUser.emailAddress}</li>
     </div>
   )

@@ -18,8 +18,10 @@ const RestaurantShow = () => {
     <>
     {restaurant && (<ul>
       <li>{restaurant.name}</li>
-      <li>{restaurant.description}</li>
       <li>{restaurant.phoneNumber}</li>
+      <li>{restaurant.address}</li>
+      <li>{restaurant.cuisine}</li>
+      <li>{restaurant.description}</li>
     </ul>)}
     </>
   )
