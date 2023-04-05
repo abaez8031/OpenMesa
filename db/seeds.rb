@@ -10,6 +10,7 @@ ApplicationRecord.transaction do
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
   User.destroy_all
+  Restaurant.destroy_all
 
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
@@ -25,5 +26,30 @@ ApplicationRecord.transaction do
     primary_dining_location: "New York", 
     password: "password"
   )
+
+  Restaurant.create!(
+    name: "Tacos Guey",
+    phone_number: "2129918222",
+    address: "37 W 19th St, New York, NY 10011",
+    cuisine: "Mexican",
+    description: "Come through and get some delicious drinks and tacos, guey"
+  )
+
+  Restaurant.create!(
+    name: "Flats Fix Taqueria and Tequila Bar",
+    phone_number: "2126330071",
+    address: "28 E 16th St, New York, NY 10003",
+    cuisine: "Mexican",
+    description: "Our name is flats but our tacos are thick"
+  )
+  Restaurant.create!(
+    name: "Tio Pio",
+    phone_number: "2122396633",
+    address: "250 E 14th St, New York, NY 10003",
+    cuisine: "Spanish",
+    description: "Our cooking is better than your favorite tio's!"
+  )
+
+
   puts "Done!"
 end

@@ -4,6 +4,8 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def show
+    @restaurant = Restaurant.find(id)
+    render :show
   end
 
 end
