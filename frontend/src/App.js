@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import ReservationSearch from "./components/ReservationSearch"
 import UserShow from './components/UserShow';
 import RestaurantsIndex from './components/Restaurants/RestaurantsIndex';
+import RestaurantShow from './components/Restaurants/RestaurantShow';
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
       </Route>
       <Route exact path="/restaurants">
         <RestaurantsIndex/>
+      </Route>
+      <Route exact path = "/restaurants/:id">
+        <RestaurantShow/>
       </Route>
     </Switch>
     </>

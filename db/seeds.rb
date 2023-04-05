@@ -42,14 +42,46 @@ ApplicationRecord.transaction do
     cuisine: "Mexican",
     description: "Our name is flats but our tacos are thick"
   )
-  Restaurant.create!(
-    name: "Tio Pio",
-    phone_number: "2122396633",
-    address: "250 E 14th St, New York, NY 10003",
-    cuisine: "Spanish",
-    description: "Our cooking is better than your favorite tio's!"
-  )
+  
+    Restaurant.create!(
+      name: "Tio Pio",
+      phone_number: "2122396633",
+      address: "250 E 14th St, New York, NY 10003",
+      cuisine: "Spanish",
+      description: "Our cooking is better than your favorite tio's!"
+    )
+  
+    Restaurant.create!(
+      name: "Tio Pepe",
+      phone_number: "2122570689",
+      address: "168 W 4th St, New York, NY 10014",
+      cuisine: "Spanish",
+      description: "Cooking so good you'll wish the chef was your tio Pepe"
+    )
+  
+    Restaurant.create!(
+      name: "Casa Mono",
+      phone_number: "2122532773",
+      address: "52 Irving Pl, New York, NY 10003",
+      cuisine: "Spanish",
+      description: "Small plate fans gather at this intimate Gramercy nook for upscale Spanish fare & a deep wine list"
+    )
+ 
+    Restaurant.create!(
+      name: "La Churreria",
+      phone_number: "2122396633",
+      address: "284 Mulberry St, New York, NY 10012",
+      cuisine: "Spanish",
+      description: "Snug spot offering paella, tapas, & other Spanish favorites, plus coffee, wine & beer"
+    )
 
-
-  puts "Done!"
+    Restaurant.create!(
+      name: "Casa Adela",
+      phone_number: "2124731881",
+      address: "66 Loisada Ave, New York, NY 10009",
+      cuisine: "Puerto Rican",
+      description: "Rotisserie chicken & cafe con leche in a pint-size, cash-only place, open since 1973"
+    )
+  
+    puts "Done!"
 end
