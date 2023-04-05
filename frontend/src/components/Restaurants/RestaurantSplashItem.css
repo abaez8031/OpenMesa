@@ -4,6 +4,8 @@
   border: 1px solid #d8d9db;
   border-radius: 4px;
   display: inline-block;
+  cursor: pointer;
+  transition: margin 0.2s ease-in-out;
 }
 
 .splash-rest-info {
@@ -13,4 +15,8 @@
 
 .splash-rest-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.splash-rest-item:hover {
+  margin-top: -2px;
 }

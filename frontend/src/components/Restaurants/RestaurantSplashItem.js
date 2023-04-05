@@ -1,9 +1,10 @@
 import "./RestaurantSplashItem.css"
 
 const RestaurantSplashItem = ({restaurant}) => {
-  const { name, phoneNumber, address, cuisine, description } = restaurant;
+  const { id, name, phoneNumber, address, cuisine, description } = restaurant;
+  console.log(id)
   return (
-    <div className="splash-rest-item">
+    <a href={`/restaurants/${id}`}><div className="splash-rest-item">
       <div className="splash-rest-info">
         <h3>{name}</h3>
         <h3>{phoneNumber}</h3>
@@ -11,7 +12,7 @@ const RestaurantSplashItem = ({restaurant}) => {
         <h3>{cuisine}</h3>
         <h3>{description}</h3>
       </div>
-    </div>
+    </div></a>
   )
 }
 

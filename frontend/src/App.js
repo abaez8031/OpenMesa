@@ -23,7 +23,7 @@ function App() {
       <Route exact path="/restaurants">
         <RestaurantsIndex/>
       </Route>
-      <Route exact path = "/restaurants/:id">
+      <Route exact path="/restaurants/:id">
         <RestaurantShow/>
       </Route>
     </Switch>

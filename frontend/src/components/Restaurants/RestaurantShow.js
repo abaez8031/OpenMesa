@@ -6,6 +6,7 @@ import { getRestaurant } from "../../store/restaurants";
 const RestaurantShow = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  console.log(id)
   const restaurant = useSelector(state => state.restaurants[id]);
   console.log(restaurant)
 
@@ -14,11 +15,13 @@ const RestaurantShow = () => {
   }, [dispatch, id])
 
   return (
-    <ul>
-      {/* <li>{restaurant.name}</li> */}
-      {/* <li>{restaurant.description}</li> */}
-      {/* <li>{restaurant.phoneNumber}</li> */}
-    </ul>
+    <>
+    {restaurant && (<ul>
+      <li>{restaurant.name}</li>
+      <li>{restaurant.description}</li>
+      <li>{restaurant.phoneNumber}</li>
+    </ul>)}
+    </>
   )
 }
 
