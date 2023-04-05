@@ -1,12 +1,16 @@
 .splash-rest-item {
   width: 236px;
   height: 322px;
-  display: flex;
-  border: 2px solid red;
+  border: 1px solid #d8d9db;
+  border-radius: 4px;
   display: inline-block;
 }
 
 .splash-rest-info {
-  text-align: center;
-  
+  color: blueviolet;
+  white-space: normal;
+}
+
+.splash-rest-item:not(:last-child) {
+  margin-right: 8px;
 }

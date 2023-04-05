@@ -7,7 +7,6 @@ import { getRestaurants } from "../../store/restaurants";
 const RestaurantsSplashPage = () => {
   const dispatch = useDispatch();
   const restaurants = useSelector(state => Object.values(state.restaurants))
-  console.log(restaurants)
 
   useEffect(() => {
     dispatch(getRestaurants())
