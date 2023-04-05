@@ -6,7 +6,8 @@ import { getRestaurant } from "../../store/restaurants";
 const RestaurantShow = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const restaurant = useSelector((state) => state.restaurants[id]);
+  const restaurant = useSelector(state => state.restaurants[id]);
+  console.log(restaurant)
 
   useEffect(() => {
     dispatch(getRestaurant(id))
@@ -14,9 +15,9 @@ const RestaurantShow = () => {
 
   return (
     <ul>
-      <li>{restaurant.name}</li>
-      <li>{restaurant.description}</li>
-      <li>{restaurant.phoneNumber}</li>
+      {/* <li>{restaurant.name}</li> */}
+      {/* <li>{restaurant.description}</li> */}
+      {/* <li>{restaurant.phoneNumber}</li> */}
     </ul>
   )
 }

@@ -15,6 +15,7 @@ ApplicationRecord.transaction do
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
   ApplicationRecord.connection.reset_pk_sequence!('users')
+  ApplicationRecord.connection.reset_pk_sequence!('restaurants')
 
   puts "Creating users..."
   # Create one user with an easy to remember username, email, and password:
@@ -26,6 +27,8 @@ ApplicationRecord.transaction do
     primary_dining_location: "New York", 
     password: "password"
   )
+
+  puts "Creating restaurants..."
 
   Restaurant.create!(
     name: "Tacos Guey",
