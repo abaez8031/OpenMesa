@@ -4,13 +4,37 @@ const RestaurantSplashItem = ({restaurant}) => {
   const { id, name, phoneNumber, address, cuisine, description } = restaurant;
   return (
     <a href={`/restaurants/${id}`}><div className="splash-rest-item">
-      <div className="splash-rest-img" ><img alt="splash-rest-img"/></div>
+      <div className="splash-rest-img"><img src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg"alt="splash-rest-img"/></div>
+
       <div className="splash-rest-info">
         <h3 className="splash-rest-info-name">{name}</h3>
-        <h3>{phoneNumber}</h3>
-        <h3>{address}</h3>
-        <h3>{cuisine}</h3>
-        <h3>{description}</h3>
+        <div className="review-star-container">
+        <div className="star-container">
+        <i className="fa-sharp fa-solid fa-star"></i>
+        <i className="fa-sharp fa-solid fa-star"></i>
+        <i className="fa-sharp fa-solid fa-star"></i>
+        <i className="fa-sharp fa-solid fa-star"></i>
+        <i className="fa-sharp fa-solid fa-star"></i>
+        </div>
+        <div className="review-container">{Math.trunc(Math.random() * 1000 + 1)} Reviews</div>
+        </div>
+
+        <div className="cuisine-price-neighborhood-container"><h3>{cuisine}</h3>
+        <div className="price-container">
+        • <i class="fa-thin fa-dollar-sign"></i>
+          <i class="fa-thin fa-dollar-sign"></i>
+          <i class="fa-thin fa-dollar-sign"></i>
+          <i class="fa-thin fa-dollar-sign"></i>
+          </div>
+          <div className="neighborhood-container">• Neighborhood</div>
+          </div>
+          
+        <div className="splash-booked">
+          <i class="fa-sharp fa-solid fa-arrow-trend-up"></i>
+          <span>Booked {Math.trunc(Math.random() * 200 + 1)} times today</span>
+          </div>
+
+
       </div>
     </div></a>
   )

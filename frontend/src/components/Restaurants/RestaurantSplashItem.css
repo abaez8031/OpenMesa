@@ -2,6 +2,7 @@
   width: 236px;
   height: 322px;
   border: 1px solid #d8d9db;
+  margin-right: 16px;
   border-radius: 4px;
   display: inline-block;
   cursor: pointer;
@@ -10,23 +11,26 @@
 }
 
 .splash-rest-info {
-  color: blueviolet;
   white-space: normal;
-
+  width: 218px;
+  height: 188px;
+  margin: 0 8px;
+  display: flex;
+  flex-direction: column;
 }
 
 .splash-rest-info-name {
   color: black;
   white-space: normal;
-  background-color: white;
   height: 24px;
   width: 218px;
   line-height: 24px;
-  margin-left: 4px;
   text-overflow: ellipsis;
   font-weight: 700;
   font-size: 18px;
   overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 8px;
 }
 
 .splash-rest-item:not(:last-child) {
@@ -43,5 +47,67 @@
   background-color: pink;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+}
 
+.splash-rest-img img {
+  height: 100%;
+  width: 100%
+}
+
+.review-star-container {
+  width: 218px;
+  height: 20px;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.star-container {
+  width: 104px;
+  height: 16px;
+}
+
+.fa-star {
+  color: red;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.review-container {
+  font-size: 14px;
+  justify-content: flex-end;
+}
+
+.cuisine-price-neighborhood-container {
+  width: 218px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.cuisine-price-neighborhood-container h3 {
+  font-size: 14px;
+  margin-right: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price-container {
+  margin-right: 4px;
+}
+
+.splash-booked {
+  width: 218px;
+  height:24px;
+}
+
+.fa-arrow-trend-up {
+  height: 14px;
+  width: 18px;
+  margin-right: 6px;
 }
