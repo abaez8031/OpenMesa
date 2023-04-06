@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getRestaurant } from "../../store/restaurants";
+import "./RestaurantShow.css"
 
 const RestaurantShow = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,9 @@ const RestaurantShow = () => {
 
   return (
     <>
+    <div className="show-img-container">
+
+    </div>
     {restaurant && (<ul>
       <li>{restaurant.name}</li>
       <li>{restaurant.phoneNumber}</li>

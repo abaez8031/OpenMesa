@@ -6,6 +6,7 @@
   display: inline-block;
   cursor: pointer;
   transition: margin 0.2s ease-in-out;
+  vertical-align: middle;
 }
 
 .splash-rest-info {

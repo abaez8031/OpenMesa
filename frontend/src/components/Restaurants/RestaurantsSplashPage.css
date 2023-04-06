@@ -1,10 +1,11 @@
 .restaurant-scroller-container {
   display: flex;
-  width: 1216px;
-  height: 330px;
+  max-width: 1216px;
+  max-height: 330px;
   margin-left: 80px;
   margin-right: 80px;
   white-space: nowrap;
+  overflow: auto;
 }
 
 .restaurant-scroller {
@@ -14,4 +15,25 @@
   background-color: palegreen;
   align-items: center;
   white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.scroll-splash-left-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.scroll-splash-right-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.scroll-splash-left-btn:hover, .scroll-splash-right-btn:hover {
+  border: 2px solid red;
 }

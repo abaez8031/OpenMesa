@@ -43,7 +43,7 @@ ApplicationRecord.transaction do
     phone_number: "2126330071",
     address: "28 E 16th St, New York, NY 10003",
     cuisine: "Mexican",
-    description: "Our name is flats but our tacos are thick"
+    description: "Our name is flats but our tacos are dummy thick"
   )
   
     Restaurant.create!(

@@ -3,3 +3,13 @@
   height: 248px;
   width: 100%;
 }
+
+.reservation-search h3 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+  vertical-align: middle;
+  
+}

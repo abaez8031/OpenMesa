@@ -7,18 +7,33 @@ import { getRestaurants } from "../../store/restaurants";
 const RestaurantsSplashPage = () => {
   const dispatch = useDispatch();
   const restaurants = useSelector(state => Object.values(state.restaurants))
+  
+  
 
   useEffect(() => {
-    dispatch(getRestaurants())
+    dispatch(getRestaurants());
+    const scrollLeftBtn = document.querySelector(".scroll-splash-left-btn")
+    const scrollRightBtn = document.querySelector(".scroll-splash-right-btn")
+    const scroller = document.querySelector(".restaurant-scroller")
+    const scrollLeft = (e) => {
+      scroller.scrollLeft -= 300
+    }
+    const scrollRight = (e) => {
+      scroller.scrollLeft += 300
+    }
+    scrollLeftBtn.addEventListener("click",scrollLeft);
+    scrollRightBtn.addEventListener("click",scrollRight);
   }, [dispatch])
 
   return (
     <div className="restaurant-scroller-container">
+      <button className="scroll-splash-left-btn">Left</button>
       <div className="restaurant-scroller">
         {restaurants.map(restaurant => (
           <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
         ))}
       </div>
+      <button className="scroll-splash-right-btn">Right</button>
     </div>
   )
 }

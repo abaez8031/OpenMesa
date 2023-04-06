@@ -2,7 +2,6 @@ import "./RestaurantSplashItem.css"
 
 const RestaurantSplashItem = ({restaurant}) => {
   const { id, name, phoneNumber, address, cuisine, description } = restaurant;
-  console.log(id)
   return (
     <a href={`/restaurants/${id}`}><div className="splash-rest-item">
       <div className="splash-rest-info">
