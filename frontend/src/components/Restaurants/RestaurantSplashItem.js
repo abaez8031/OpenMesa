@@ -4,6 +4,7 @@ const RestaurantSplashItem = ({restaurant}) => {
   const { id, name, phoneNumber, address, cuisine, description } = restaurant;
   return (
     <a href={`/restaurants/${id}`}><div className="splash-rest-item">
+      <div className="splash-rest-img" ><img alt="splash-rest-img"/></div>
       <div className="splash-rest-info">
         <h3>{name}</h3>
         <h3>{phoneNumber}</h3>

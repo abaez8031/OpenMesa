@@ -7,9 +7,7 @@ import "./RestaurantShow.css"
 const RestaurantShow = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  console.log(id)
   const restaurant = useSelector(state => state.restaurants[id]);
-  console.log(restaurant)
 
   useEffect(() => {
     dispatch(getRestaurant(id))
@@ -20,6 +18,8 @@ const RestaurantShow = () => {
     <div className="show-img-container">
 
     </div>
+    <div className="show-rest-left-container">
+
     {restaurant && (<ul>
       <li>{restaurant.name}</li>
       <li>{restaurant.phoneNumber}</li>
@@ -27,6 +27,9 @@ const RestaurantShow = () => {
       <li>{restaurant.cuisine}</li>
       <li>{restaurant.description}</li>
     </ul>)}
+    </div>
+    <div className="show-rest-right-container">
+    </div>
     </>
   )
 }

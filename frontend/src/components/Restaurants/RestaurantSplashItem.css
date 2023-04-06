@@ -21,3 +21,12 @@
 .splash-rest-item:hover {
   margin-top: -2px;
 }
+
+.splash-rest-img {
+  height: 132px;
+  width: 234px;
+  background-color: pink;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+
+}
