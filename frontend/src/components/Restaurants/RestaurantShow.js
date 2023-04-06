@@ -19,6 +19,26 @@ const RestaurantShow = () => {
 
     </div>
     <div className="show-rest-left-container">
+    <div className="show-rest-info-container">
+    <ol className="show-rest-info-tabs">
+      <li className="show-rest-info-tab">Overview</li>
+      <li>Experiences</li>
+      <li>Offers</li>
+      <li>Popular dishes</li>
+      <li>Photos</li>
+      <li>Menu</li>
+      <li>Reviews</li>
+    </ol>
+    {restaurant && (
+      <>
+      <h3 className="show-rest-name">{restaurant.name}</h3>
+      <div className="rest-overview-header">
+        <div className="rating-info"> * * * * * 5.0</div>
+        <div>Reviews</div>
+        <div>{restaurant.cuisine}</div>
+      </div>
+      </>
+    )}
 
     {restaurant && (<ul>
       <li>{restaurant.name}</li>
@@ -28,6 +48,8 @@ const RestaurantShow = () => {
       <li>{restaurant.description}</li>
     </ul>)}
     </div>
+    </div>
+
     <div className="show-rest-right-container">
     </div>
     </>

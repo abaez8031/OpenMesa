@@ -12,6 +12,21 @@
 .splash-rest-info {
   color: blueviolet;
   white-space: normal;
+
+}
+
+.splash-rest-info-name {
+  color: black;
+  white-space: normal;
+  background-color: white;
+  height: 24px;
+  width: 218px;
+  line-height: 24px;
+  margin-left: 4px;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 18px;
+  overflow: hidden;
 }
 
 .splash-rest-item:not(:last-child) {

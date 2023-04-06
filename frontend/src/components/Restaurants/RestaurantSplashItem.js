@@ -6,7 +6,7 @@ const RestaurantSplashItem = ({restaurant}) => {
     <a href={`/restaurants/${id}`}><div className="splash-rest-item">
       <div className="splash-rest-img" ><img alt="splash-rest-img"/></div>
       <div className="splash-rest-info">
-        <h3>{name}</h3>
+        <h3 className="splash-rest-info-name">{name}</h3>
         <h3>{phoneNumber}</h3>
         <h3>{address}</h3>
         <h3>{cuisine}</h3>

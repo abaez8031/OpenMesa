@@ -25,3 +25,30 @@
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
+.show-rest-info-tabs {
+  width: 608px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline-start: 16px;
+  border-bottom: 2px solid black;
+  padding-top: 12px;
+}
+
+.show-rest-name {
+  font-size: 48px;
+  padding: 32px 0;
+}
+
+.rest-overview-header {
+  height: 24px;
+  width: 488px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.rest-overview-header div {
+  margin: 4px
+}
