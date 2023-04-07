@@ -37,7 +37,7 @@ ApplicationRecord.transaction do
     phone_number: "2129918222",
     address: "37 W 19th St, New York, NY 10011",
     cuisine: "Mexican",
-    description: "Come through and get some delicious drinks and tacos, guey"
+    description: "This is an intimate and attractive operation in the heart of the Flatiron District. Add on a warm welcome, impeccable service and inventive food—no wonder it's a hit. While the city may boast many a Mexican spot, this inviting and high-end concept bucks the trend by way of spacious tables that afford privacy, a tempting bar and custom blue-gray tiles. The menu is a veritable sensory thrill via ingredient combos that are seemingly familiar yet deliciously creative. Big eye tuna crudo with avocado crema makes a bright kickoff and may be tailed by sea bass ceviche with gooseberry. Scallop aguachile showcases finger lime as a perfect counterpoint to the mild cucumber; while birria tacos arrive with salsa negra and a bowl of savory broth for dipping."
   )
 
   Restaurant.create!(
@@ -53,7 +53,7 @@ ApplicationRecord.transaction do
     phone_number: "2122396633",
     address: "250 E 14th St, New York, NY 10003",
     cuisine: "Spanish",
-    description: "Our cooking is better than your favorite tio's!"
+    description: "Established in 2003, Tio Pio has been a longstanding establishment within the MetroTech community in Brooklyn. This thriving restaurant brought irresistible flavors to the neighborhood through its famous rotisserie chicken, beans and rice. Even in the midst of the 2020 global pandemic, Tio Pio was there to support the community with delivery and take-out meals. Our new location, Tio Pio East will bring the same beloved flavors to the Manhattan community."
   )
   
   Restaurant.create!(
@@ -127,6 +127,119 @@ ApplicationRecord.transaction do
     cuisine: "Colombian",
     description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
   )
+  
+  Restaurant.create!(
+    name: "El Castillo de Jagua",
+    phone_number: "7186845187",
+    address: "679 Flatbush Ave, Brooklyn, NY 11225",
+    cuisine: "Dominican",
+    description: "Unfussy restaurant featuring rotisserie chicken, stews & roast pork, plus some castle-themed decor."
+  )
+
+
+  Restaurant.create!(
+    name: "La Cabaña Rodríguez",
+    phone_number: "7182870248",
+    address: "1062 Flatbush Ave, Brooklyn, NY 11226",
+    cuisine: "Dominican",
+    description: "Bustling joint featuring simple Spanish, Cuban & Dominican dishes in an informal atmosphere."
+  )
+
+  Restaurant.create!(
+    name: "Genao",
+    phone_number: "7183840085",
+    address: "162 Throop Ave, Brooklyn, NY 11206",
+    cuisine: "Dominican",
+    description: "Genao is always packed with customers, drawn in by the rich aroma of savory dishes and lively Latin music. The walls are adorned with vibrant paintings and photos of the Dominican Republic, transporting diners to another world. With each bite of mofongo or pernil, patrons felt like they were experiencing a piece of the Caribbean right in their own neighborhood."
+  )
+
+  Restaurant.create!(
+    name: "La Ñapa",
+    phone_number: "3474350920",
+    address: "656 Nostrand Ave., Brooklyn, NY 11216",
+    cuisine: "Dominican",
+    description: "Savor the flavors of the Caribbean at our Dominican restaurant. Enjoy delicious mofongo and pernil while surrounded by vibrant decor and lively music."
+  )
+  
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+  # Restaurant.create!(
+  #   name: "Mi Bella Colombia",
+  #   phone_number: "2013484601",
+  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
+  #   cuisine: "Colombian",
+  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
+  # )
+
+  
 
     puts "Done!"
 end
