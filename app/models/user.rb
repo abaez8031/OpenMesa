@@ -3,9 +3,10 @@ class User < ApplicationRecord
   before_validation :ensure_session_token
   
   has_many :reviews,
-  class_name :Review,
-  primary_key :id,
-  foreign_key :user_id
+  class_name: :Review,
+  primary_key: :id,
+  foreign_key: :user_id,
+  dependent: :destroy
 
   validates :first_name, :last_name, :phone_number, :email_address, :primary_dining_location, :password_digest, :session_token, presence: true
 

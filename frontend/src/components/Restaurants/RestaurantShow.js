@@ -5,14 +5,18 @@ import { getRestaurant } from "../../store/restaurants";
 import "./RestaurantShow.css"
 import bill from "../../assets/icons8-money-bill-32.png"
 import cutlery from "../../assets/icons8-cutlery-100.png"
+import { fetchReviews } from "../../store/reviews";
 
 const RestaurantShow = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const restaurant = useSelector(state => state.restaurants[id]);
+  const reviews = useSelector(state => state.reviews);
+  console.log(reviews)
 
   useEffect(() => {
-    dispatch(getRestaurant(id))
+    dispatch(getRestaurant(id));
+    dispatch(fetchReviews(id))
   }, [dispatch, id])
 
   return (

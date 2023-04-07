@@ -37,7 +37,7 @@ export const getReviews = (state) => {
   }
 }
 
-export const fetchReviews = () => async dispatch => {
+export const fetchReviews = (restaurantId) => async dispatch => {
   const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews`)
   if (res.ok) {
     const data = await res.json();
@@ -46,7 +46,7 @@ export const fetchReviews = () => async dispatch => {
   }
 }
 
-export const fetchReview = () => async dispatch => {
+export const fetchReview = (restaurantId, reviewId) => async dispatch => {
   const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews/${reviewId}`)
   if (res.ok) {
     const data = await res.json();
@@ -55,7 +55,7 @@ export const fetchReview = () => async dispatch => {
   }
 }
 
-export const createReview = review => async dispatch => {
+export const createReview = (restaurantId,review) => async dispatch => {
   const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews`, {
     method: "POST",
     headers: {
@@ -69,8 +69,8 @@ export const createReview = review => async dispatch => {
   }
 }
 
-export const updateReview = review => async dispatch => {
-  const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews/${id}`, {
+export const updateReview = (restaurantId,review) => async dispatch => {
+  const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews/${review.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
@@ -83,7 +83,7 @@ export const updateReview = review => async dispatch => {
   }
 }
 
-export const deleteReview = reviewId => async dispatch => {
+export const deleteReview = (restaurantId,reviewId) => async dispatch => {
   const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews/${reviewId}`,
   {method: "DELETE"
 })
