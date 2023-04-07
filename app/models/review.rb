@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  validates :rating, :text, presence: true
+  validates :rating, :body, presence: true
   
   belongs_to :user,
   class_name :User,
@@ -10,5 +10,5 @@ class Review < ApplicationRecord
   class_name :Restaurant,
   primary_key :id,
   foreign_key :restaurant_id
-  
+
 end
