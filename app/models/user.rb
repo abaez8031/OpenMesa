@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   has_secure_password
   before_validation :ensure_session_token
+  
+  has_many :reviews,
+  class_name :Review,
+  primary_key :id,
+  foreign_key :user_id
 
   validates :first_name, :last_name, :phone_number, :email_address, :primary_dining_location, :password_digest, :session_token, presence: true
 
