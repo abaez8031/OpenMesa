@@ -9,6 +9,9 @@ const RestaurantsSplashPage = () => {
   const restaurants = useSelector(state => Object.values(state.restaurants))
   const colombianRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Colombian").sort(() => 0.5 - Math.random()).slice(0, 5)
   const mexicanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Mexican").sort(() => 0.5 - Math.random()).slice(0, 5)
+  const dominicanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Dominican").sort(() => 0.5 - Math.random()).slice(0, 5)
+  const brazilianRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Brazilian").sort(() => 0.5 - Math.random()).slice(0, 5)
+  const venezuelanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Venezuelan").sort(() => 0.5 - Math.random()).slice(0, 5)
   
   // console.log(mexicanRestaurants)
   // console.log(colombianRestaurants)
@@ -30,14 +33,73 @@ const RestaurantsSplashPage = () => {
   }, [dispatch])
 
   return (
-    <div className="restaurant-scroller-container">
-      <button className="scroll-splash-left-btn">Left</button>
-      <div className="restaurant-scroller">
-        {restaurants.map(restaurant => (
-          <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
-        ))}
+    <div className="splash-page-content">
+      <div className="splash-header">
+        <h3>Colombian Restaurants</h3>
       </div>
-      <button className="scroll-splash-right-btn">Right</button>
+
+      <div className="restaurant-scroller-container">
+        <button className="scroll-splash-left-btn">	&lt;</button>
+        <div className="restaurant-scroller">
+          {colombianRestaurants.map(restaurant => (
+            <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
+          ))}
+        </div>
+        <button className="scroll-splash-right-btn">&gt;</button>
+      </div>
+
+      <div className="splash-header">
+        <h3>Mexican Restaurants</h3>
+      </div>
+      <div className="restaurant-scroller-container">
+        <button className="scroll-splash-left-btn">&lt;</button>
+        <div className="restaurant-scroller">
+          {mexicanRestaurants.map(restaurant => (
+            <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
+          ))}
+        </div>
+        <button className="scroll-splash-right-btn">&gt;</button>
+      </div>
+      
+      <div className="splash-header">
+        <h3>Dominican Restaurants</h3>
+      </div>
+      <div className="restaurant-scroller-container">
+        <button className="scroll-splash-left-btn">	&lt;</button>
+        <div className="restaurant-scroller">
+          {dominicanRestaurants.map(restaurant => (
+            <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
+          ))}
+        </div>
+        <button className="scroll-splash-right-btn">&gt;</button>
+      </div>
+
+      <div className="splash-header">
+        <h3>Brazilian Restaurants</h3>
+      </div>
+      <div className="restaurant-scroller-container">
+        <button className="scroll-splash-left-btn">	&lt;</button>
+        <div className="restaurant-scroller">
+          {brazilianRestaurants.map(restaurant => (
+            <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
+          ))}
+        </div>
+        <button className="scroll-splash-right-btn">&gt;</button>
+      </div>
+
+      <div className="splash-header">
+        <h3>Venezuelan Restaurants</h3>
+      </div>
+      <div className="restaurant-scroller-container">
+        <button className="scroll-splash-left-btn">	&lt;</button>
+        <div className="restaurant-scroller">
+          {venezuelanRestaurants.map(restaurant => (
+            <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
+          ))}
+        </div>
+        <button className="scroll-splash-right-btn">&gt;</button>
+      </div>
+
     </div>
   )
 }

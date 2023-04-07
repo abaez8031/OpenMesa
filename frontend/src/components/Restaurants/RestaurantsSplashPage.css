@@ -1,12 +1,32 @@
-.restaurant-scroller-container {
+.splash-page-content {
   margin-top: 80px;
+  margin-left: 102px;
+  margin-right: 102px;
+  display: flex;
+  flex-direction: column;
+}
+
+.splash-header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: inset 0 -1px rgb(220, 220, 220);
+}
+
+.splash-header h3 {
+  margin-bottom: 32px;
+}
+
+.restaurant-scroller-container {
   display: flex;
   max-width: 1216px;
   max-height: 330px;
-  margin-left: 102px;
-  margin-right: 102px;
   white-space: nowrap;
-  overflow: auto;
+  overflow: visible;
+  margin-bottom: 60px;
+  position: relative;
 }
 
 .restaurant-scroller {
@@ -24,6 +44,11 @@
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
+  position: absolute;
+  top:30%;
+  left: -25px;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .scroll-splash-right-btn {
@@ -32,6 +57,11 @@
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
+  position: absolute;
+  top:30%;
+  right: -25px;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .scroll-splash-left-btn:hover, .scroll-splash-right-btn:hover {
