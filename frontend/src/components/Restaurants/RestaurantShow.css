@@ -54,7 +54,7 @@
 
 .rest-overview-header {
   height: 24px;
-  width: 454px;
+  width: 512px;
   display: flex;
   flex-direction: row;
   margin-top: 16px;
@@ -72,6 +72,7 @@
 .fa-message {
   height: 17px;
   width: 18px;
+  margin-right: 4px;
 }
 
 .show-reviews-container {
@@ -80,14 +81,30 @@
 }
 
 .show-price-bill {
-  height: 24px;
-  width: 24px;
+  height: 18px;
+  width: 18px;
+  margin-right: 4px;
   color: rgb(0,0,0);
 }
 
 .show-price-container {
   width: 120px;
   height: 24px;
-  display: flex;
-  align-items: start;
+}
+
+.show-price-container span {
+  vertical-align: top;
+}
+
+.show-cuisine-container {
+  width: 120px;
+  height: 24px;
+}
+
+.show-cuisine-cutlery {
+  width: 18px;
+  height: 18px;
+  color:rgb(0, 0, 0);
+  vertical-align: top;
+  margin-right: 4px;
 }
