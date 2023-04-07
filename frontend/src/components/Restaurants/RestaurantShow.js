@@ -63,7 +63,7 @@ const RestaurantShow = () => {
         </div>
         </>
       )}
-        <span className="rest-show-description">{restaurant.description}</span>
+        {restaurant && (<span className="rest-show-description">{restaurant.description}</span>)}
       </div>
     </div>
 

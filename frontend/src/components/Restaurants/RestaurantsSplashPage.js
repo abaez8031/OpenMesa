@@ -7,7 +7,11 @@ import { getRestaurants } from "../../store/restaurants";
 const RestaurantsSplashPage = () => {
   const dispatch = useDispatch();
   const restaurants = useSelector(state => Object.values(state.restaurants))
+  const colombianRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Colombian").sort(() => 0.5 - Math.random()).slice(0, 5)
+  const mexicanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Mexican").sort(() => 0.5 - Math.random()).slice(0, 5)
   
+  // console.log(mexicanRestaurants)
+  // console.log(colombianRestaurants)
   
 
   useEffect(() => {
