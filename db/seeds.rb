@@ -248,6 +248,135 @@ ApplicationRecord.transaction do
     cuisine: "Brazilian",
     description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
   )
+  Restaurant.create!(
+    name: "Chavela's",
+    phone_number: "7186223100",
+    address: "736 Franklin Ave, Brooklyn, NY 11238",
+    cuisine: "Mexican",
+    description: "Old world style classic Mexican dishes, tacos, and tequila cocktails in a beautifully decorated space."
+  )
+
+  Restaurant.create!(
+    name: "El Barrio Burritos",
+    phone_number: "7185766611",
+    address: "796A Franklin Ave, Brooklyn, NY 11238",
+    cuisine: "Mexican",
+    description: "Bright, cheery spot for California-style burritos, tacos & wraps, plus smoothies."
+  )
+
+  Restaurant.create!(
+    name: "Citrico",
+    phone_number: "3479554519",
+    address: "681 Washington Ave, Brooklyn, NY 11238",
+    cuisine: "Mexican",
+    description: "Bright, contemporary eatery doling out Mexican fare in a narrow space with counter seating."
+  )
+
+  Restaurant.create!(
+    name: "Nacho Macho Taco",
+    phone_number: "7186222727",
+    address: "417 Prospect Pl, Brooklyn, NY 11238",
+    cuisine: "Mexican",
+    description: "Down-to-earth fixture serving up a variety of tacos, enchiladas, burritos & other Mexican staples."
+  )
+
+  Restaurant.create!(
+    name: "Gueros",
+    phone_number: "7182304941",
+    address: "605 Prospect Pl, Brooklyn, NY 11238",
+    cuisine: "Mexican",
+    description: "Colorful, snug storefront for margaritas & creative tacos, including popular breakfast options."
+  )
+
+  Restaurant.create!(
+    name: "Maya Taqueria of Prospect Heights",
+    phone_number: "7186386292",
+    address: "637 Vanderbilt Ave, Brooklyn, NY 11238",
+    cuisine: "Mexican",
+    description: "For over a decade we’ve been proudly serving a taste of the San Francisco Mission District to the people of Brooklyn. Every meal is made-from-scratch and prepared with the freshest ingredients— never canned or frozen — creating dishes loaded with authentic west coast flavors."
+  )
+
+  Restaurant.create!(
+    name: "El Cofre",
+    phone_number: "7189351153",
+    address: "454 Myrtle Ave, Brooklyn, NY 11205",
+    cuisine: "Dominican",
+    description: "Modest Dominican counter-serve offering all-day eats, including American breakfast & lunch specials."
+  )
+
+  Restaurant.create!(
+    name: "El Nuevo Sabor Latino",
+    phone_number: "7187889063",
+    address: "620 4th Ave, Brooklyn, NY 11215",
+    cuisine: "Dominican",
+    description: "El Nuevo Sabor Latino is a vibrant Dominican restaurant that offers a taste of the Caribbean in every dish. With a menu featuring traditional Dominican dishes like mofongo and sancocho, each meal is made with fresh, high-quality ingredients and cooked using time-honored techniques. "
+  )
+
+  Restaurant.create!(
+    name: "El Rey IV Restaurant & Billard",
+    phone_number: "7182961717",
+    address: "7516 Rockaway Blvd, Queens, NY 11421",
+    cuisine: "Dominican",
+    description: "Hello Welcome to El Rey IV Restaurant, we are a restaurant with a great diversity of services and experiences such as billiards, event venue, bar, restaurant, arcade games and much more!"
+  )
+
+  Restaurant.create!(
+    name: "Mama Lupe Dominican Food",
+    phone_number: "7186391495",
+    address: "42-19 102nd St, Queens, NY 11368",
+    cuisine: "Dominican",
+    description: "From mouth-watering plantains to savory stews, Mama Lupe's menu offers a wide variety of flavorful dishes that will transport you to the heart of the Caribbean."
+  )
+
+  # Restaurant.create!(
+  #   name: "Miss Favela",
+  #   phone_number: "7182304040",
+  #   address: "57 S 5th St, Brooklyn, NY 11249",
+  #   cuisine: "Brazilian",
+  #   description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  # )
+  # Restaurant.create!(
+  #   name: "Miss Favela",
+  #   phone_number: "7182304040",
+  #   address: "57 S 5th St, Brooklyn, NY 11249",
+  #   cuisine: "Brazilian",
+  #   description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  # )
+  # Restaurant.create!(
+  #   name: "Miss Favela",
+  #   phone_number: "7182304040",
+  #   address: "57 S 5th St, Brooklyn, NY 11249",
+  #   cuisine: "Brazilian",
+  #   description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  # )
+  # Restaurant.create!(
+  #   name: "Miss Favela",
+  #   phone_number: "7182304040",
+  #   address: "57 S 5th St, Brooklyn, NY 11249",
+  #   cuisine: "Brazilian",
+  #   description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  # )
+  # Restaurant.create!(
+  #   name: "Miss Favela",
+  #   phone_number: "7182304040",
+  #   address: "57 S 5th St, Brooklyn, NY 11249",
+  #   cuisine: "Brazilian",
+  #   description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  # )
+  # Restaurant.create!(
+  #   name: "Miss Favela",
+  #   phone_number: "7182304040",
+  #   address: "57 S 5th St, Brooklyn, NY 11249",
+  #   cuisine: "Brazilian",
+  #   description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  # )
+  # Restaurant.create!(
+  #   name: "Miss Favela",
+  #   phone_number: "7182304040",
+  #   address: "57 S 5th St, Brooklyn, NY 11249",
+  #   cuisine: "Brazilian",
+  #   description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  # )
 
   
 
