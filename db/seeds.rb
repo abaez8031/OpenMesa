@@ -386,31 +386,31 @@ ApplicationRecord.transaction do
     rating: 5,
     user_id: 1,
     restaurant_id: 1,
-    body: "This place is amazing"
+    body: "Very good"
   )
   Review.create!(
     rating: 4,
     user_id: 1,
     restaurant_id: 1,
-    body: "This place is amazing"
+    body: "It was cool"
   )
   Review.create!(
     rating: 3,
     user_id: 1,
     restaurant_id: 1,
-    body: "This place is amazing"
+    body: "Ehh"
   )
   Review.create!(
     rating: 4,
     user_id: 1,
     restaurant_id: 2,
-    body: "This place is amazing"
+    body: "Decent place"
   )
   Review.create!(
     rating: 5,
     user_id: 1,
     restaurant_id: 2,
-    body: "This place is amazing"
+    body: "Cool spot"
   )
   
 

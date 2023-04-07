@@ -6,13 +6,13 @@ import "./RestaurantShow.css"
 import bill from "../../assets/icons8-money-bill-32.png"
 import cutlery from "../../assets/icons8-cutlery-100.png"
 import { fetchReviews } from "../../store/reviews";
+import CreateReviewForm from "../Reviews/CreateReviewForm";
 
 const RestaurantShow = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const restaurant = useSelector(state => state.restaurants[id]);
-  const reviews = useSelector(state => state.reviews);
-  console.log(reviews)
+  const reviews = useSelector(state => Object.values(state.reviews));
 
   useEffect(() => {
     dispatch(getRestaurant(id));
@@ -75,6 +75,7 @@ const RestaurantShow = () => {
     </div>
     </>
   )
+
 }
 
 export default RestaurantShow;
