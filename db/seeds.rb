@@ -160,84 +160,94 @@ ApplicationRecord.transaction do
     cuisine: "Dominican",
     description: "Savor the flavors of the Caribbean at our Dominican restaurant. Enjoy delicious mofongo and pernil while surrounded by vibrant decor and lively music."
   )
-  
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
-  # Restaurant.create!(
-  #   name: "Mi Bella Colombia",
-  #   phone_number: "2013484601",
-  #   address: "4512 Bergenline Ave, Union City, NJ 07087",
-  #   cuisine: "Colombian",
-  #   description: "Seguro, vos sos latinoamericano. Pues acá te esperamos pa' que vivamos una experiencia al paladar como en casa. Con saborcito Colombiano. Ah! Y si venís el fin de semana te tengo un menú especial y además variadito. Para que no te aburrás de comer siempre lo mismo. Acá lo que encontrás es comida para todos los gustos y paladares. Ven en familia que comer en buena compañía hace que la experiencia sea aún mejor. Estás de acuerdo conmigo? Acá nos vemos pues."
-  # )
+
+  Restaurant.create!(
+    name: "La Isla Cuchifritos",
+    phone_number: "7183884666",
+    address: "6 Graham Ave, Brooklyn, NY 11206",
+    cuisine: "Puerto Rican",
+    description: "Popular, long-running spot doling out classic Puerto Rican plates in small, basic quarters."
+  )
+
+  Restaurant.create!(
+    name: "Tu Cachapa Inc",
+    phone_number: "2125687575",
+    address: "4195 Broadway, New York, NY 10033",
+    cuisine: "Venezuelan",
+    description: "Compact counter-service place offering Venezuelan-style sandwiches, arepas & other street eats."
+  )
+
+  Restaurant.create!(
+    name: "Santa Salsa",
+    phone_number: "3473652710",
+    address: "234 Starr St, Brooklyn, NY 11237",
+    cuisine: "Venezuelan",
+    description: "Hip, casual eatery serving Venezuelan street food such as yuca fries, burgers & hot dogs."
+  )
+
+  Restaurant.create!(
+    name: "Patacon Pisao",
+    phone_number: "6466785913",
+    address: "139 Essex St, New York, NY 10002",
+    cuisine: "Venezuelan",
+    description: "Patacón sandwiches (meat between fried plantain cakes), arepas & other Venezuelan street fare."
+  )
+
+  Restaurant.create!(
+    name: "Palacio De Los Pepitos",
+    phone_number: "6469323453",
+    address: "91-8 Roosevelt Ave, Queens, NY 11372",
+    cuisine: "Venezuelan",
+    description: "Comida Venezolana especializada en Pepitos clásicos. También encuentra sándwiches, arepas y otras comidas callejeras al estilo venezolano. Straightforward Venezuelan take-out spot specializing in Classic Style Pepitos and other Venezuelan-style sandwiches, arepas & other street eats."
+  )
+
+  Restaurant.create!(
+    name: "Guacuco",
+    phone_number: "7183872300",
+    address: "360 Throop Ave, Brooklyn, NY 11221",
+    cuisine: "Venezuelan",
+    description: "This family-run Venezuelan eatery serves arepas, empanadas & exotic juices in a no-frills setting."
+  )
+
+  Restaurant.create!(
+    name: "El Budare Café",
+    phone_number: "7188992405",
+    address: "8721 Roosevelt Ave, Queens, NY 11372",
+    cuisine: "Venezuelan",
+    description: "Experience the bold and flavorful cuisine of Venezuela at our restaurant. From arepas to pabellón criollo, our menu is sure to delight your taste buds."
+  )
+
+  Restaurant.create!(
+    name: "Emporium Brasil",
+    phone_number: "2127644646",
+    address: "15 W 46th St, New York, NY 10036",
+    cuisine: "Brazilian",
+    description: "Authentic Brazilian Cuisine. Established in 1992, Emporium Brasil was founded as a Brazilian market more than 25 years ago. It has involved into a dining destination on a stretch of West 46th Street between 5th ad 6th Avenues, which was officially named Little Brazil Street by the city in 1995. There's a taste of history in every bite of Brazil's Cuisine. Our plates are delicately prepared, and attention is given for every little detail, that's what makes the difference for our customers. Emporium's full bar features authentic Brazilian cocktails, like the traditional Caipirinha. Recommended Appetizers range from 'Aperitivo 46' to the Brazilian hors d'oeuvres made by order, which are all handmade."
+  )
+
+  Restaurant.create!(
+    name: "Tamborim Bar & Grill",
+    phone_number: "2014164400",
+    address: "130 Newark Ave, Jersey City, NJ 07302",
+    cuisine: "Brazilian",
+    description: "Welcome to our Brazilian restaurant, where the atmosphere is as vibrant as the cuisine. Savor traditional dishes like feijoada and churrasco, while enjoying live music and the colorful decor inspired by the lively streets of Rio de Janeiro."
+  )
+
+  Restaurant.create!(
+    name: "Petisco Brazuca",
+    phone_number: "3474058905",
+    address: "833 Dekalb Ave, Brooklyn, NY 11221",
+    cuisine: "Brazilian",
+    description: "At our Brazilian restaurant, you'll be transported to the heart of Brazil with every bite. Our menu features classic dishes like coxinha and moqueca, while our lively atmosphere and samba music create the perfect ambiance for a memorable dining experience. Come join us for a taste of Brazil."
+  )
+
+  Restaurant.create!(
+    name: "Miss Favela",
+    phone_number: "7182304040",
+    address: "57 S 5th St, Brooklyn, NY 11249",
+    cuisine: "Brazilian",
+    description: "Rio de Janeiro's festive air comes to Brooklyn via traditional Brazilian cuisine & colorful decor."
+  )
 
   
 
