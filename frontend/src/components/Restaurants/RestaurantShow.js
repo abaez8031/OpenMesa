@@ -70,13 +70,19 @@ const RestaurantShow = () => {
       )}
         {restaurant && (<span className="rest-show-description">{restaurant.description}</span>)}
       <div className="reviews-header">
-      <h2>What {reviews.length} people are saying</h2>
+        <h2>What {reviews.length} people are saying</h2>
       </div>
+      
       <ol className="show-rest-reviews">
       {reviews.map(review => (
+
         <li key={review.id}className="show-rest-review">
+
           <div className="review-left">
-            <div style={{backgroundColor: COLORS[`${Math.floor(Math.random() * COLORS.length)}`]}}className="review-avatar"><span>{review.user.first_name.slice(0,1)}{review.user.last_name.slice(0,1)}</span></div>
+            <div style={{backgroundColor: COLORS[`${Math.floor(Math.random() * COLORS.length)}`]}}className="review-avatar">
+              <span>{review.user.first_name.slice(0,1)}{review.user.last_name.slice(0,1)}
+              </span>
+            </div>
             <div className="review-user-info">
               <h3>{review.user.first_name}</h3>
               <h3>{review.user.primary_dining_location}</h3>
@@ -84,7 +90,17 @@ const RestaurantShow = () => {
           </div>
 
           <div className="review-right">
-            <h3>{review.body}</h3>
+            <div className="review-stars">
+              <i className="fa-sharp fa-solid fa-star"></i>
+              <i className="fa-sharp fa-solid fa-star"></i>
+              <i className="fa-sharp fa-solid fa-star"></i>
+              <i className="fa-sharp fa-solid fa-star"></i>
+              <i className="fa-sharp fa-solid fa-star"></i>
+              <span>Dined {Math.trunc(Math.random() * 365 + 1)} days ago</span>
+            </div>
+            <div className="review-body">
+              <h3>{review.body}</h3>
+            </div>
           </div>
         </li>
       ))}
