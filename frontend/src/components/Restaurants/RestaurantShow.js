@@ -13,6 +13,7 @@ const RestaurantShow = () => {
   const { id } = useParams();
   const restaurant = useSelector(state => state.restaurants[id]);
   const reviews = useSelector(state => Object.values(state.reviews));
+  const COLORS = ["aquamarine", "coral", "chartreuse", "fuchsia"]
 
   useEffect(() => {
     dispatch(getRestaurant(id));
@@ -75,7 +76,7 @@ const RestaurantShow = () => {
       {reviews.map(review => (
         <li key={review.id}className="show-rest-review">
           <div className="review-left">
-            <div className="review-avatar"><span>{review.user.first_name.slice(0,1)}{review.user.last_name.slice(0,1)}</span></div>
+            <div style={{backgroundColor: COLORS[`${Math.floor(Math.random() * COLORS.length)}`]}}className="review-avatar"><span>{review.user.first_name.slice(0,1)}{review.user.last_name.slice(0,1)}</span></div>
             <div className="review-user-info">
               <h3>{review.user.first_name}</h3>
               <h3>{review.user.primary_dining_location}</h3>
