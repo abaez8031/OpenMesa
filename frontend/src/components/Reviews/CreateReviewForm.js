@@ -10,6 +10,7 @@ const CreateReviewForm = () => {
   const [rating, setRating] = useState(0);
   const [body, setBody] = useState("")
   const sessionUser = useSelector(state => state.session.user)
+  const reviewStars = document.querySelectorAll(".review-form-star")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,7 +35,19 @@ const CreateReviewForm = () => {
           maxLength={1000}
           className="review-textarea"
         />
+      <div>
 
+      <span data-value="1"><i className="fa-sharp fa-solid fa-star review-form-star"></i></span>
+
+      <span data-value="2"><i className="fa-sharp fa-solid fa-star review-form-star"></i></span>
+
+      <span data-value="3"><i className="fa-sharp fa-solid fa-star review-form-star"></i></span>
+
+      <span data-value="4"><i className="fa-sharp fa-solid fa-star review-form-star"></i></span>
+
+      <span data-value="5"><i className="fa-sharp fa-solid fa-star review-form-star"></i></span>
+
+      </div>
         <button type="submit">Create Review</button>
       </form>
     </div>

@@ -43,11 +43,11 @@ const RestaurantShow = () => {
           <div className="rest-overview-header">
 
             <div className="show-star-container">
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
               <span>5.0</span>
             </div>
 
@@ -107,6 +107,7 @@ const RestaurantShow = () => {
       </ol>
 
     </div>
+        <CreateReviewForm/>
       </div>
 
 

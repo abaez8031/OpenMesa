@@ -10,11 +10,11 @@ const RestaurantSplashItem = ({restaurant}) => {
         <h3 className="splash-rest-info-name">{name}</h3>
         <div className="review-star-container">
         <div className="star-container">
-        <i className="fa-sharp fa-solid fa-star"></i>
-        <i className="fa-sharp fa-solid fa-star"></i>
-        <i className="fa-sharp fa-solid fa-star"></i>
-        <i className="fa-sharp fa-solid fa-star"></i>
-        <i className="fa-sharp fa-solid fa-star"></i>
+        <i className="fa-sharp fa-solid fa-star active-star"></i>
+        <i className="fa-sharp fa-solid fa-star active-star"></i>
+        <i className="fa-sharp fa-solid fa-star active-star"></i>
+        <i className="fa-sharp fa-solid fa-star active-star"></i>
+        <i className="fa-sharp fa-solid fa-star active-star"></i>
         </div>
         <div className="review-container">{Math.trunc(Math.random() * 1000 + 1)} Reviews</div>
         </div>

@@ -3,9 +3,10 @@
 }
 
 .review-form-container {
-  max-height: 200px;
-  max-width: 200px;
+  height: 200px;
+  width: 100%;
   display: flex;
+
 }
 
 .review-form-container {
@@ -15,4 +16,17 @@
 .review-form-container form {
   height: 100%;
   width: 100%;
+}
+
+.review-form-star {
+  cursor: pointer;
+  color: gray;
+}
+
+.review-form-star:hover {
+  color: red;
+}
+
+.active-star {
+  color: red;
 }

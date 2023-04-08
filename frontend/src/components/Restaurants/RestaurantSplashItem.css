@@ -69,7 +69,6 @@
 }
 
 .fa-star {
-  color: red;
   width: 16px;
   height: 16px;
   margin-right: 4px;
@@ -110,4 +109,8 @@
   height: 14px;
   width: 18px;
   margin-right: 6px;
+}
+
+.active-star {
+  color: red;
 }
