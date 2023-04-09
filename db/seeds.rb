@@ -527,6 +527,152 @@ ApplicationRecord.transaction do
     restaurant_id: 2,
     body: "The tacos were indeed dummy thick. Not only were they packed with meat but the flavors were also super on point. Will definitely be coming back!"
   )
+
+  Review.create!(
+    rating: 5,
+    user_id: 5,
+    restaurant_id: 17,
+    body: "This is THE spot for Puerto Rican classics. That papa relleno and alcapurria though"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 4,
+    restaurant_id: 18,
+    body: "This such a fun place to come before or after going out! Delicious arepas and other Venezulean goodies"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 19,
+    body: "Come for the yuca fries. Stay for the vibe."
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 20,
+    body: "The tacos were indeed dummy thick. Not only were they packed with meat but the flavors were also super on point. Will definitely be coming back!"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 5,
+    restaurant_id: 2,
+    body: "I LOVE patacones and this place is the top of my list for the best ones in New York"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 2,
+    body: "The tacos were indeed dummy thick. Not only were they packed with meat but the flavors were also super on point. Will definitely be coming back!"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 2,
+    body: "The tacos were indeed dummy thick. Not only were they packed with meat but the flavors were also super on point. Will definitely be coming back!"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 4,
+    restaurant_id: 21,
+    body: "Super delicious food. Sometimes they don't seat you right away even though you made a reservation"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 3,
+    restaurant_id: 22,
+    body: "Definitely not a fancy spot but the food and prices are solid quality"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 5,
+    restaurant_id: 23,
+    body: "Sometimes they blast the music here, so it's not the best if you're looking for a place where you can catch up with someone, but otherwise this place is a vibe and the menu is super extensive with Venezuelan dishes"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 4,
+    restaurant_id: 24,
+    body: "This place is BOMB. All of the Brazilian treats are so yummy and they have such a big drink menu and they're all delish. Great option if you're looking for a fun spot where dinner feels like a true experience."
+  )
+  Review.create!(
+    rating: 3,
+    user_id: 1,
+    restaurant_id: 25,
+    body: "Service can be a bit all over the place here and I asked for my meat to be cooked medium rare and it came well done. It was still very flavorful but that was very disappointing"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 1,
+    restaurant_id: 26,
+    body: "More of a party vibe than the focus is on the restaurant, but still a cool spot"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 27,
+    body: "Truly a transportive vibe! Having been to Brazil, this does feel like a slice of the Rio de Janiero vibrancy. Great cheese puffs!"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 4,
+    restaurant_id: 28,
+    body: "If you're looking for authentic Mexican, this is it! Those chilaquiles slap"
+  )
+  Review.create!(
+    rating: 3,
+    user_id: 5,
+    restaurant_id: 29,
+    body: "10/10 for the burritos, but some of the smoothie flavor combinations can be a bit iffy"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 2,
+    restaurant_id: 30,
+    body: "Beware that this place is really small, but everything on the menu is delectable"
+  )
+  Review.create!(
+    rating: 3,
+    user_id: 4,
+    restaurant_id: 31,
+    body: "When the food is good, it's on point. However, there are times where the ingredients don't taste the freshest and the food is more mediocre"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 4,
+    restaurant_id: 32,
+    body: "Gueros is the place for Taco Tuesday. Delicious margarita flavors!! What more can you ask for?!"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 1,
+    restaurant_id: 33,
+    body: "Mouthwatering nachos. Perfectly pressed quesadillas. Yummy enchiladas. Everything you would want from a Mexican restaurant's menu!"
+  )
+  Review.create!(
+    rating: 2,
+    user_id: 2,
+    restaurant_id: 34,
+    body: "The thing about El Cofre is that they are very inconsistent. Sometimes their food is a 5 out of 5 and other times, for example, their pasteles taste sour and old. Also, they seem to make different items every day and they will be out of stock of the item you came to get."
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 5,
+    restaurant_id: 35,
+    body: "Whenever I'm sick and need sancocho, this is my go to!"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 4,
+    restaurant_id: 36,
+    body: "This is a perfect choice for a birthday party or other celebration! Live music, good service, pool tables and more. Really large menu as well. They'll also set up nice decorations for your gathering"
+  )
+
+  Review.create!(
+    rating: 4,
+    user_id: 5,
+    restaurant_id: 37,
+    body: "Solid casual Dominican spot where you get a lot of bang for your buck"
+  )
   
 
     puts "Done!"
