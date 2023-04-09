@@ -22,6 +22,11 @@ const CreateReviewForm = () => {
       body
     }
     dispatch(createReview(id, review))
+    setRating(0);
+    setBody("")
+    reviewStars.forEach(star => {
+        star.classList.remove("active-star")
+    })
   }
 
   const handleStarClick = (e) => {

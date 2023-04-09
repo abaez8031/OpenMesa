@@ -15,7 +15,7 @@ class Api::ReviewsController < ApplicationController
     @review.user_id = current_user.id
     @review.restaurant_id = params[:restaurant_id]
     if @review.save
-      render "/api/restaurants/#{review.restaurant_id}"
+      render :show
     else
       render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
     end
