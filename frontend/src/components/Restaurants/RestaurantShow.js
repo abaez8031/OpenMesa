@@ -53,7 +53,7 @@ const RestaurantShow = () => {
 
             <div className="show-reviews-container">
             <i className="fa-regular fa-message fa-flip-horizontal"></i>
-              <span>{Math.trunc(Math.random() * 1000 + 1)} Reviews</span>
+              <span>{reviews.length} Reviews</span>
             </div>
             <div className="show-price-container">
               <img className="show-price-bill" src={bill}></img>
@@ -91,11 +91,11 @@ const RestaurantShow = () => {
 
           <div className="review-right">
             <div className="review-stars">
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
+              <i className="fa-sharp fa-solid fa-star active-star"></i>
               <span>Dined {Math.trunc(Math.random() * 365 + 1)} days ago</span>
             </div>
             <div className="review-body">

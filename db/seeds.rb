@@ -32,6 +32,24 @@ ApplicationRecord.transaction do
     password: "password"
   )
 
+  User.create!(
+    first_name: "Talisa",
+    last_name: "Ramos",
+    phone_number: "1234567890",
+    email_address: "talisa@ramos.com",
+    primary_dining_location: "New York",
+    password: "password"
+  )
+
+  User.create!(
+    first_name: "Marleen",
+    last_name: "Ayala",
+    phone_number: "0987654321",
+    email_address: "marleen@ayala.com",
+    primary_dining_location: "New York",
+    password: "password"
+  )
+
   puts "Creating restaurants..."
 
   Restaurant.create!(
@@ -386,31 +404,109 @@ ApplicationRecord.transaction do
     rating: 5,
     user_id: 1,
     restaurant_id: 1,
-    body: "Very good"
+    body: "This place has really nice ambience and the food was very good. Waiters could have been more attentive."
   )
   Review.create!(
     rating: 4,
     user_id: 1,
-    restaurant_id: 1,
-    body: "It was cool"
+    restaurant_id: 2,
+    body: "Great happy hour deals. Gets really crowded starting at 5."
   )
   Review.create!(
     rating: 3,
     user_id: 1,
-    restaurant_id: 1,
-    body: "Ehh"
+    restaurant_id: 3,
+    body: "This is a new location for a Brooklyn restaurant, but the food can be hit or miss"
   )
   Review.create!(
     rating: 4,
     user_id: 1,
-    restaurant_id: 2,
-    body: "Decent place"
+    restaurant_id: 4,
+    body: "Decent place for a burrito and a marg. Thanks Tio Pepe!"
   )
   Review.create!(
     rating: 5,
     user_id: 1,
+    restaurant_id: 5,
+    body: "This is a great spot if you're a wine connoisseur. Good tapas too."
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 1,
+    restaurant_id: 6,
+    body: "Delicious churros! Best to come here at an off time like early on a weekday."
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 1,
+    restaurant_id: 7,
+    body: "Great spot for food after going out--the only thing to note is that it's cash only and gets crowded quickly because it's pretty small"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 1,
+    restaurant_id: 8,
+    body: "I love Nadas! Such good empanadas and they're gluten free which is amazing"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 1,
+    restaurant_id: 9,
+    body: "Empanada Mama is a classic with so many options but sometimes the quality can be a little hit or miss"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 10,
+    body: "The churrasco slaps."
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 11,
+    body: "This is a great place for special occasions. Delicious food and good portions for the price!"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 2,
+    restaurant_id: 12,
+    body: "What's fun about this place is how they change up the menu on the weekdays versus the weekends"
+  )
+  Review.create!(
+    rating: 3,
+    user_id: 2,
+    restaurant_id: 13,
+    body: "Decent spot to pick up dinner from, not the best service if you're going to sit there for eating your food"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
+    restaurant_id: 14,
+    body: "Such a fun date night vibe! Bring your boo"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 2,
+    restaurant_id: 15,
+    body: "Really good mofongo and pernil. Come here if you want classics from DR and PR"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 2,
+    restaurant_id: 16,
+    body: "Really yummy food! The service can suffer when they get crowded"
+  )
+  Review.create!(
+    rating: 2,
+    user_id: 2,
+    restaurant_id: 9,
+    body: "I really was not feeling these empanadas. It took so long to get them, so I was already hangry. Major disappointment"
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 2,
     restaurant_id: 2,
-    body: "Cool spot"
+    body: "The tacos were indeed dummy thick. Not only were they packed with meat but the flavors were also super on point. Will definitely be coming back!"
   )
   
 
