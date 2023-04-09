@@ -67,6 +67,7 @@ export const createReview = (restaurantId,review) => async dispatch => {
     const data = await res.json();
     dispatch(receiveReview(data))
   }
+  return res;
 }
 
 export const updateReview = (restaurantId,review) => async dispatch => {

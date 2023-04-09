@@ -21,16 +21,16 @@ const RestaurantSplashItem = ({restaurant}) => {
 
         <div className="cuisine-price-neighborhood-container"><h3>{cuisine}</h3>
         <div className="price-container">
-        • <i class="fa-thin fa-dollar-sign"></i>
-          <i class="fa-thin fa-dollar-sign"></i>
-          <i class="fa-thin fa-dollar-sign"></i>
-          <i class="fa-thin fa-dollar-sign"></i>
+        • <i className="fa-thin fa-dollar-sign"></i>
+          <i className="fa-thin fa-dollar-sign"></i>
+          <i className="fa-thin fa-dollar-sign"></i>
+          <i className="fa-thin fa-dollar-sign"></i>
           </div>
           <div className="neighborhood-container">• Neighborhood</div>
           </div>
           
         <div className="splash-booked">
-          <i class="fa-sharp fa-solid fa-arrow-trend-up"></i>
+          <i className="fa-sharp fa-solid fa-arrow-trend-up"></i>
           <span>Booked {Math.trunc(Math.random() * 200 + 1)} times today</span>
           </div>
 

@@ -14,6 +14,7 @@ const RestaurantShow = () => {
   const restaurant = useSelector(state => state.restaurants[id]);
   const reviews = useSelector(state => Object.values(state.reviews));
   const COLORS = ["aquamarine", "coral", "chartreuse", "fuchsia"]
+  const currentUser = useSelector(state => state.session.user);
 
   useEffect(() => {
     dispatch(getRestaurant(id));
@@ -106,8 +107,10 @@ const RestaurantShow = () => {
       ))}
       </ol>
 
+    {currentUser &&
+        (<CreateReviewForm/>)
+    }
     </div>
-        <CreateReviewForm/>
       </div>
 
 
