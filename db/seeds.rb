@@ -140,7 +140,7 @@ ApplicationRecord.transaction do
     phone_number: "2126730300",
     address: "95 Allen St, New York, NY 10002",
     cuisine: "Colombian",
-    description: "Known for having the best Empanadas in NYC, Empanada Mama is a colorful, vibrant and casual Latin restaurant in the neighborhood of Hell’s Kitchen, LES, and Times Square in Manhattan."
+    description: "Empanada Mama is a colorful, vibrant and casual Latin restaurant in the neighborhood of Hell’s Kitchen in Manhattan. The restaurant serves food of mostly Colombian influence, but also from all of Latin America. It’s intent is to serve great quality food of Latin homemade likeness, for an accessible and reasonable price, to attend the discerning needs of our diverse clientele."
   )
 
   Restaurant.create!(
@@ -672,6 +672,24 @@ ApplicationRecord.transaction do
     user_id: 5,
     restaurant_id: 37,
     body: "Solid casual Dominican spot where you get a lot of bang for your buck"
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 2,
+    restaurant_id: 9,
+    body: "We were greeted and seated immediately. Our waiter who attended to us was very personable and attentive. The food was very flavorful and presented very well. I would definitely return to this establishment."
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 4,
+    restaurant_id: 9,
+    body: "We had a great time at Empanada mama. Yummy guacamole, salad, and empanadas. Very relaxed atmosphere, delightful service. Will be back for brunch."
+  )
+  Review.create!(
+    rating: 4,
+    user_id: 5,
+    restaurant_id: 9,
+    body: "This location is still new and space is great. I really loved their seafood empanadas and I can't enough of it. I will most likely go back because I still haven't try other stuff on their menu."
   )
   
 
