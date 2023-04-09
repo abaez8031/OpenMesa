@@ -435,7 +435,7 @@ ApplicationRecord.transaction do
     rating: 3,
     user_id: 1,
     restaurant_id: 3,
-    body: "This is a new location for a Brooklyn restaurant, but the food can be hit or miss"
+    body: "This is a new location for a Brooklyn restaurant, but the food can be hit or miss."
   )
   Review.create!(
     rating: 4,
@@ -459,19 +459,19 @@ ApplicationRecord.transaction do
     rating: 5,
     user_id: 1,
     restaurant_id: 7,
-    body: "Great spot for food after going out--the only thing to note is that it's cash only and gets crowded quickly because it's pretty small"
+    body: "Great spot for food after going out--the only thing to note is that it's cash only and gets crowded quickly because it's pretty small."
   )
   Review.create!(
     rating: 5,
     user_id: 1,
     restaurant_id: 8,
-    body: "I love Nadas! Such good empanadas and they're gluten free which is amazing"
+    body: "I love Nadas! Such good empanadas and they're gluten free which is amazing."
   )
   Review.create!(
     rating: 4,
     user_id: 1,
     restaurant_id: 9,
-    body: "Empanada Mama is a classic with so many options but sometimes the quality can be a little hit or miss"
+    body: "Empanada Mama is a classic with so many options but sometimes the quality can be a little hit or miss."
   )
   Review.create!(
     rating: 5,
@@ -489,37 +489,37 @@ ApplicationRecord.transaction do
     rating: 4,
     user_id: 2,
     restaurant_id: 12,
-    body: "What's fun about this place is how they change up the menu on the weekdays versus the weekends"
+    body: "What's fun about this place is how they change up the menu on the weekdays versus the weekends."
   )
   Review.create!(
     rating: 3,
     user_id: 2,
     restaurant_id: 13,
-    body: "Decent spot to pick up dinner from, not the best service if you're going to sit there for eating your food"
+    body: "Decent spot to pick up dinner from, not the best service if you're going to sit there for eating your food."
   )
   Review.create!(
     rating: 5,
     user_id: 2,
     restaurant_id: 14,
-    body: "Such a fun date night vibe! Bring your boo"
+    body: "Such a fun date night vibe! Bring your boo."
   )
   Review.create!(
     rating: 4,
     user_id: 2,
     restaurant_id: 15,
-    body: "Really good mofongo and pernil. Come here if you want classics from DR and PR"
+    body: "Really good mofongo and pernil. Come here if you want classics from DR and PR."
   )
   Review.create!(
     rating: 4,
     user_id: 2,
     restaurant_id: 16,
-    body: "Really yummy food! The service can suffer when they get crowded"
+    body: "Really yummy food! The service can suffer when they get crowded."
   )
   Review.create!(
     rating: 2,
-    user_id: 2,
+    user_id: 3,
     restaurant_id: 9,
-    body: "I really was not feeling these empanadas. It took so long to get them, so I was already hangry. Major disappointment"
+    body: "I really was not feeling these empanadas. It took so long to get them, so I was already hangry. Major disappointment."
   )
   Review.create!(
     rating: 5,
