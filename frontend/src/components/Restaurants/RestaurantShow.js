@@ -107,7 +107,7 @@ const RestaurantShow = () => {
       ))}
       </ol>
 
-    {currentUser &&
+    {currentUser && !reviews.some(review => review.userId === currentUser.id) &&
         (<CreateReviewForm/>)
     }
     </div>
