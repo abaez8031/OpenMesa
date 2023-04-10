@@ -24,7 +24,6 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    render "/api/restaurants/#{@review.restaurant_id}"
   end
 
   private
