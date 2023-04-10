@@ -11,15 +11,12 @@ const EditReviewForm = () => {
   const [body, setBody] = useState("")
   const reviewStars = document.querySelectorAll(".review-form-star");
   let review = useSelector(getReview(id));
-  // console.log(review)
   
-  useEffect(() => {
-    if(id) {
-      dispatch(fetchReview(id));
-      setRating(review.rating);
-      setBody(review.body)
-    }
-  }, [dispatch, id])
+  useEffect( () => {
+    dispatch(fetchReview(id));
+    setRating(review?.rating);
+    setBody(review?.body)
+  },[dispatch, id])
 
   const handleSubmit = (e) => {
     e.preventDefault();

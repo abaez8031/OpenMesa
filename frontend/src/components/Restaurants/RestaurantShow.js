@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getRestaurant } from "../../store/restaurants";
 import "./RestaurantShow.css"
 import bill from "../../assets/icons8-money-bill-32.png"
 import cutlery from "../../assets/icons8-cutlery-100.png"
-import { deleteReview, fetchReviews } from "../../store/reviews";
+import { deleteReview, fetchReviews, getReviews } from "../../store/reviews";
 import CreateReviewForm from "../Reviews/CreateReviewForm";
 
 const RestaurantShow = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const restaurant = useSelector(state => state.restaurants[id]);
-  const reviews = useSelector(state => Object.values(state.reviews));
+  const reviews = useSelector(getReviews);
   const COLORS = ["aquamarine", "coral", "chartreuse", "fuchsia"]
   const currentUser = useSelector(state => state.session.user);
 
@@ -103,9 +103,16 @@ const RestaurantShow = () => {
               <h3>{review.body}</h3>
             </div>
             {currentUser && review.userId === currentUser.id && (
-              <button className="delete-review-btn" onClick={() => {
-                dispatch(deleteReview(review.id))
-              }}>Delete Review</button>
+              <>
+                <button className="delete-review-btn" onClick={() => {
+                  dispatch(deleteReview(review.id))
+                }}>Delete Review</button>
+                <Link to={`/reviews/${review.id}/edit`}>
+                  <button className="edit-review-btn">
+                    Edit Review
+                  </button>
+                </Link>
+              </>
             )}
           </div>
         </li>
