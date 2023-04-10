@@ -5,6 +5,7 @@ import UserShow from './components/UserShow';
 import RestaurantsIndex from './components/Restaurants/RestaurantsIndex';
 import RestaurantShow from './components/Restaurants/RestaurantShow';
 import RestaurantsSplashPage from "./components/Restaurants/RestaurantsSplashPage"
+import EditReviewForm from './components/Reviews/EditReviewForm';
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
         <RestaurantShow/>
       </Route>
     </Switch>
+    <Route exact path="/reviews/:id/edit">
+      <EditReviewForm/>
+    </Route>
     </>
   );
 }

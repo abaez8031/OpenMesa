@@ -46,8 +46,8 @@ export const fetchReviews = (restaurantId) => async dispatch => {
   }
 }
 
-export const fetchReview = (restaurantId, reviewId) => async dispatch => {
-  const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews/${reviewId}`)
+export const fetchReview = (reviewId) => async dispatch => {
+  const res = await csrfFetch(`/api/reviews/${reviewId}`)
   if (res.ok) {
     const data = await res.json();
     dispatch(receiveReview(data))
@@ -70,8 +70,8 @@ export const createReview = (restaurantId,review) => async dispatch => {
   return res;
 }
 
-export const updateReview = (restaurantId,review) => async dispatch => {
-  const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews/${review.id}`, {
+export const updateReview = (review) => async dispatch => {
+  const res = await csrfFetch(`/api/reviews/${review.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
