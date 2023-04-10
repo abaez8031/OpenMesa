@@ -59,7 +59,9 @@ const CreateReviewForm = () => {
             className="review-textarea"
           />
         </div>
-
+        <div className="review-form-body-info">
+        <p className="length-of-body">{body?.length}/1000 characters</p>
+      </div>
       <div className="review-form-stars">
 
       <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={1}></i></span>

@@ -1,0 +1,59 @@
+.edit-review-textarea {
+  resize: none;
+}
+
+.edit-review-form-container {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-review-form {
+  height: 100%;
+  width: 100%;
+}
+
+.edit-review-form-body {
+  height: 500px;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 100%;
+  width: 100%;
+}
+
+.edit-review-form-stars {
+  vertical-align: top;
+}
+
+.review-form-star {
+  cursor: pointer;
+  color: gray;
+}
+
+.review-form-star:hover {
+  color: red;
+}
+
+.active-star {
+  color: red;
+}
+
+.edit-review-form {
+  padding-top: 50px;
+}
+
+.edit-review-form-header {
+  font-size: 36px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+
+}
+
+.edit-review-form-container button {
+  width: 100px
+}

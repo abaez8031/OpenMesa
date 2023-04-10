@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReview, getReview, updateReview } from "../../store/reviews";
-import { Redirect, useParams} from "react-router-dom";
-import "./CreateReviewForm.css"
+import { useParams} from "react-router-dom";
+import "./EditReviewForm.css"
 
 const EditReviewForm = () => {
   const dispatch = useDispatch();
@@ -57,21 +57,24 @@ const EditReviewForm = () => {
   }
 
   return (
-    <div className="review-form-container">
-      <div className="review-form-header">
+    <div className="edit-review-form-container">
+      <div className="edit-review-form-header">
         <h3>Update Review</h3>
       </div>
       <form onSubmit={handleSubmit}
-      className="review-form">
-        <div className="review-form-body">
+      className="edit-review-form">
+        <div className="edit-review-form-body">
           <textarea
             value={body}
             onChange={(e) => setBody(e.target.value)}
             required
             rows={5}
             maxLength={1000}
-            className="review-textarea"
+            className="edit-review-textarea"
           />
+          <div className="review-form-body-info">
+            <p className="length-of-body">{body?.length}/1000 characters</p>
+          </div>
         </div>
 
       <div className="review-form-stars">
