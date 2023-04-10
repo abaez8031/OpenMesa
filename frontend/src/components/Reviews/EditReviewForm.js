@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReview, getReview, updateReview } from "../../store/reviews";
-import { useParams } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import "./CreateReviewForm.css"
 
 const EditReviewForm = () => {
@@ -11,6 +11,15 @@ const EditReviewForm = () => {
   const [body, setBody] = useState("")
   const reviewStars = document.querySelectorAll(".review-form-star");
   let review = useSelector(getReview(id));
+
+  reviewStars.forEach(star => {
+    if (star.dataset.value <= rating) {
+      star.classList.add("active-star")
+    }
+    else {
+      star.classList.remove("active-star")
+    }
+  })
   
   useEffect( () => {
     dispatch(fetchReview(id));
@@ -20,7 +29,7 @@ const EditReviewForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    review = {
+    let review = {
       ...review,
       rating,
       body
