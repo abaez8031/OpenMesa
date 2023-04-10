@@ -102,7 +102,7 @@ const RestaurantShow = () => {
             <div className="review-body">
               <h3>{review.body}</h3>
             </div>
-            {review.userId === currentUser.id && (
+            {currentUser && review.userId === currentUser.id && (
               <button className="delete-review-btn" onClick={() => {
                 dispatch(deleteReview(review.id))
               }}>Delete Review</button>

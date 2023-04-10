@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :restaurants, only: [:index, :show] do
       resources :reviews, only: [:index, :show, :create]
     end
-    resources :reviews, only: [:destroy]
+    resources :reviews, only: [:destroy, :update]
   end
   get '*path', to: "static_pages#frontend_index"
 end
