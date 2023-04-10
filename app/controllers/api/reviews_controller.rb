@@ -26,6 +26,11 @@ class Api::ReviewsController < ApplicationController
     @review.destroy
   end
 
+  def update
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+  end
+
   private
 
   def review_params

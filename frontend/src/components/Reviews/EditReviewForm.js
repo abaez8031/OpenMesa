@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReview, getReview, updateReview } from "../../store/reviews";
-import { useParams} from "react-router-dom";
+import { Redirect, useParams} from "react-router-dom";
 import "./CreateReviewForm.css"
 
 const EditReviewForm = () => {
@@ -29,7 +29,7 @@ const EditReviewForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let review = {
+    review = {
       ...review,
       rating,
       body
@@ -40,6 +40,7 @@ const EditReviewForm = () => {
     reviewStars.forEach(star => {
         star.classList.remove("active-star")
     })
+    window.location.replace(`/restaurants/${review.restaurantId}`);
   }
 
   const handleStarClick = (e) => {
