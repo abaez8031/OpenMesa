@@ -84,8 +84,8 @@ export const updateReview = (restaurantId,review) => async dispatch => {
   }
 }
 
-export const deleteReview = (restaurantId,reviewId) => async dispatch => {
-  const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews/${reviewId}`,
+export const deleteReview = (reviewId) => async dispatch => {
+  const res = await csrfFetch(`/api/reviews/${reviewId}`,
   {method: "DELETE"
 })
 if (res.ok) {

@@ -5,7 +5,7 @@ import { getRestaurant } from "../../store/restaurants";
 import "./RestaurantShow.css"
 import bill from "../../assets/icons8-money-bill-32.png"
 import cutlery from "../../assets/icons8-cutlery-100.png"
-import { fetchReviews } from "../../store/reviews";
+import { deleteReview, fetchReviews } from "../../store/reviews";
 import CreateReviewForm from "../Reviews/CreateReviewForm";
 
 const RestaurantShow = () => {
@@ -18,7 +18,7 @@ const RestaurantShow = () => {
 
   useEffect(() => {
     dispatch(getRestaurant(id));
-    dispatch(fetchReviews(id))
+    dispatch(fetchReviews(id));
   }, [dispatch, id])
 
   return (
@@ -102,6 +102,11 @@ const RestaurantShow = () => {
             <div className="review-body">
               <h3>{review.body}</h3>
             </div>
+            {review.userId === currentUser.id && (
+              <button className="delete-review-btn" onClick={() => {
+                dispatch(deleteReview(review.id))
+              }}>Delete Review</button>
+            )}
           </div>
         </li>
       ))}
