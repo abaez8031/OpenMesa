@@ -25,7 +25,7 @@ const RestaurantShow = () => {
     return totalRating/reviews.length
   }
   const avgRating = calculateAvgRating()
-
+  
   useEffect(() => {
     dispatch(getRestaurant(id));
     dispatch(fetchReviews(id));
@@ -59,7 +59,7 @@ const RestaurantShow = () => {
               <i className={`fa-sharp fa-solid fa-star ${Math.round(avgRating) >= 3 ? "active-star" : ""}`}></i>
               <i className={`fa-sharp fa-solid fa-star ${Math.round(avgRating) >= 4 ? "active-star" : ""}`}></i>
               <i className={`fa-sharp fa-solid fa-star ${Math.round(avgRating) >= 5 ? "active-star" : ""}`}></i>
-              <span>{avgRating}</span>
+              <span>{avgRating.toString()}</span>
             </div>
 
             <div className="show-reviews-container">
