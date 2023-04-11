@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ReservationForm.css"
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { createReservation } from "../../store/reservations";
+import { createReservation, fetchReservations, getReservations } from "../../store/reservations";
 
 const ReservationForm = () => {
-
   const dispatch = useDispatch();
   const { id } = useParams();
   const currentUser = useSelector(state => state.session.user);
+  
+  const reservations = useSelector(getReservations).filter(reservation => reservation.userId === currentUser.id && reservation.restaurantId === id)
+
+  console.log(reservations)
+
   const nextHour = new Date().getHours() + 1
   const [numOfGuests, setNumOfGuests] = useState(2);
   const [date, setDate] = useState("");
@@ -37,6 +41,10 @@ const ReservationForm = () => {
     }
   }
   
+  useEffect(() => {
+    dispatch(fetchReservations())
+  }, [dispatch, id])
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let reservation = {
