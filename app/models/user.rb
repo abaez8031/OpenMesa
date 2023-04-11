@@ -8,6 +8,12 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   dependent: :destroy
 
+  has_many :reservations,
+  class_name: :Reservation,
+  primary_key: :id,
+  foreign_key: :user_id
+  dependent: :destroy
+
   validates :first_name, :last_name, :phone_number, :email_address, :primary_dining_location, :password_digest, :session_token, presence: true
 
   validates :phone_number, numericality: { only_integer: true }
