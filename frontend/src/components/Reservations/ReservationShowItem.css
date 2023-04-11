@@ -1,5 +1,5 @@
 .reservation-show-info {
-  width: 100%;
+  width: 1405px;
   height: 320px;
   border: 1px solid gray;
   padding: 16px;
@@ -19,7 +19,7 @@ p {
 }
 
 .reservation-show-left img {
-  width: 400px;
+  width: 250px;
   height: 100%;
   flex: 4;
 }
@@ -30,6 +30,7 @@ p {
   height: 100%;
   width: 1000px;
   justify-content: space-between;
+  flex: 4;
 }
 
 .reservation-rest-name {
@@ -49,4 +50,8 @@ p {
 
 .reservation-clock {
   margin-right: 5px;
+}
+
+.reservation-show-right h3,p {
+  margin-left: 16px;
 }
