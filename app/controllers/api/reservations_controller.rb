@@ -10,12 +10,10 @@ class Api::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    @reservation.user_id = current_user.id
-    @reservation.restaurant_id = params[:restaurant_id]
     if @reservation.save
       render :show
     else
-      render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @reservation.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -32,7 +30,7 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:time,:date,:num_of_guests)
+    params.permit(:time,:date,:num_of_guests, :restaurant_id, :user_id)
   end
 
 end

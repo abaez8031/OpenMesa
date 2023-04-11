@@ -119,7 +119,7 @@ const RestaurantShow = () => {
                 }}><img className="delete-btn-icon" src={trash}/></button>
                 <Link to={`/reviews/${review.id}/edit`}>
                   <button className="edit-review-btn">
-                  <i class="fa-regular fa-pen-to-square"></i>
+                  <i className="fa-regular fa-pen-to-square"></i>
                   </button>
                 </Link>
               </div>
@@ -137,7 +137,7 @@ const RestaurantShow = () => {
 
 
     <div className="show-rest-right-container">
-      <ReservationForm/>
+      {currentUser && (<ReservationForm/>)}
     </div>
     </>
   )

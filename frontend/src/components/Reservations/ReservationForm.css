@@ -1,0 +1,13 @@
+.select-time-btn {
+  background-color: #da3743;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.clicked-time-btn {
+  background-color: gray;
+}

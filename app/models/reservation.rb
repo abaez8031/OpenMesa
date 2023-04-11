@@ -1,5 +1,5 @@
 class Reservation < ApplicationRecord
-  validates :time, :date, :num_of_guests presence: true
+  validates :time, :date, :num_of_guests, presence: true
   validates :num_of_guests, numericality: {in: 1..20}
 
   belongs_to :user,

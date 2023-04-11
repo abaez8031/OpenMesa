@@ -56,8 +56,8 @@ export const fetchReservation = (reservationId) => async dispatch => {
   }
 }
 
-export const createReservation = (restaurantId,reservation) => async dispatch => {
-  const res = await csrfFetch(`/api/restaurants/${restaurantId}reservations`, {
+export const createReservation = (reservation) => async dispatch => {
+  const res = await csrfFetch(`/api/reservations`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
