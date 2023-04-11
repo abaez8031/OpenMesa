@@ -5,7 +5,7 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
-import openMesaLogo from "./pngwing.com.png"
+import openMesaLogo from "../../assets/pngwing.com.png"
 
 
 const  Navigation = () => {

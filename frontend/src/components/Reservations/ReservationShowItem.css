@@ -1,0 +1,52 @@
+.reservation-show-info {
+  width: 100%;
+  height: 320px;
+  border: 1px solid gray;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+
+p {
+  color: black;
+}
+
+.reservation-show-left {
+  height: 100%;
+  width: 250px;
+  flex: 1;
+}
+
+.reservation-show-left img {
+  width: 400px;
+  height: 100%;
+  flex: 4;
+}
+
+.reservation-show-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 1000px;
+  justify-content: space-between;
+}
+
+.reservation-rest-name {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.fa-clock {
+  color: black;
+  margin-right: 5px;
+}
+
+.fa-user-res {
+  color: black;
+  margin-right: 5px;
+}
+
+.reservation-clock {
+  margin-right: 5px;
+}
