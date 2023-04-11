@@ -8,6 +8,7 @@ import cutlery from "../../assets/icons8-cutlery-100.png"
 import trash from "../../assets/icons8-trash-can-64.png"
 import { deleteReview, fetchReviews, getReviews } from "../../store/reviews";
 import CreateReviewForm from "../Reviews/CreateReviewForm";
+import ReservationForm from "../Reservations/ReservationForm";
 
 const RestaurantShow = () => {
   const dispatch = useDispatch();
@@ -21,8 +22,7 @@ const RestaurantShow = () => {
     reviews.forEach(review => {
       totalRating += review.rating;
     })
-    let avgRating = totalRating/reviews.length
-    return avgRating;
+    return totalRating/reviews.length
   }
   const avgRating = calculateAvgRating()
 
@@ -137,6 +137,7 @@ const RestaurantShow = () => {
 
 
     <div className="show-rest-right-container">
+      <ReservationForm/>
     </div>
     </>
   )
