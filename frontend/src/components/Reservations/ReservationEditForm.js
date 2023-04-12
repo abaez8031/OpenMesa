@@ -23,10 +23,10 @@ const ReservationEditForm = () => {
   const editTimeBtns = document.querySelectorAll(".edit-time-btn")
   editTimeBtns.forEach(btn => {
     if(btn.value === time) {
-      btn.classList.add("clicked-time-btn")
+      btn.classList.add("clicked-edit-time-btn")
     }
     else {
-      btn.classList.remove("clicked-time-btn")
+      btn.classList.remove("clicked-edit-time-btn")
     }
   })
 
