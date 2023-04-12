@@ -30,14 +30,14 @@ const ReservationForm = () => {
 
   if (date === currentDate) {
     for(let i = nextHour; i >= 8 && i <= 16; i++) {
-      if(!reservations.some(reservation => reservation.time === i)) {
+      if(!reservations.some(reservation => reservation.time === i && reservation.date === date)) {
         availableReservations.push(i)
       }
     }
   }
   else {
     for(let i = 8; i <= 16; i ++) {
-      if(!reservations.some(reservation => reservation.time === i)) {
+      if(!reservations.some(reservation => reservation.time === i && reservation.date === date)) {
         availableReservations.push(i)
       }
     }
@@ -61,6 +61,7 @@ const ReservationForm = () => {
     setDate("")
     setTime("")
     setNumOfGuests(2)
+    window.location.replace(`/users/${currentUser.id}`);
   }
 
 
