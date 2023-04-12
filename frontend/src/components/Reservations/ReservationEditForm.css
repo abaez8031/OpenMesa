@@ -11,3 +11,23 @@
 .clicked-edit-time-btn {
   background-color: gray;
 }
+
+.edit-reservation-form-container {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-reservation-form {
+  width: 50%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.edit-reservation-form-container h3 {
+  font-size: 48px;
+  padding-left: 25px;
+  margin-bottom: 25px;
+}

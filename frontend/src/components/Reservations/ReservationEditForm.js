@@ -63,40 +63,40 @@ const ReservationEditForm = () => {
   }
 
   return (
-    <>
-    {restaurant && (<h3>{restaurant}</h3>)}
-    <form onSubmit={handleSubmit}>
-      <label>Party Size:
-        <input
-          type="number"
-          min="2"
-          max="20"
-          value={numOfGuests}
-          onChange={(e) => setNumOfGuests(e.target.value)}
-          required
-        />
-      </label>
+    <div className="edit-reservation-form-container">
+      <form className="edit-reservation-form" onSubmit={handleSubmit}>
+      {restaurant && (<h3>Update Reservation at {restaurant}</h3>)}
+        <label>Party Size:
+          <input
+            type="number"
+            min="2"
+            max="20"
+            value={numOfGuests}
+            onChange={(e) => setNumOfGuests(e.target.value)}
+            required
+          />
+        </label>
+          
+        <label>Date:
+          <input
+            type="date"
+            value={date}
+            min={currentDate}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
+        </label>
+          
+        {availableReservations.map((resTime,i) => (
+          <button className="edit-time-btn" key={i} value={resTime} onClick={(e) => {
+            e.preventDefault();
+            setTime(e.target.value)
+            }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
+        ))}
         
-      <label>Date:
-        <input
-          type="date"
-          value={date}
-          min={currentDate}
-          onChange={(e) => setDate(e.target.value)}
-          required
-        />
-      </label>
-        
-      {availableReservations.map((resTime,i) => (
-        <button className="edit-time-btn" key={i} value={resTime} onClick={(e) => {
-          e.preventDefault();
-          setTime(e.target.value)
-          }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
-      ))}
-      
-      <button type="submit">Update Reservation</button>
-    </form>
-    </>
+        <button type="submit">Update Reservation</button>
+      </form>
+    </div>
   );
 }
 

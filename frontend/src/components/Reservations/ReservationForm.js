@@ -10,7 +10,6 @@ const ReservationForm = () => {
   const currentUser = useSelector(state => state.session.user);
   const reservations = useSelector(getReservations).filter(reservation => reservation.userId == currentUser.id && reservation.restaurantId == id)
 
-  console.log(currentUser)
 
   const nextHour = new Date().getHours() + 1
   const [numOfGuests, setNumOfGuests] = useState(2);
@@ -20,9 +19,6 @@ const ReservationForm = () => {
   const [month,day,year] = new Date().toLocaleDateString("en-US", { timeZone: "America/New_York" }).split("/");
   const currentDate = new Date(year, month - 1, day).toISOString().split("T")[0]
   const selectTimeBtns = document.querySelectorAll(".select-time-btn")
-  console.log(reservations[0]?.date)
-  console.log(currentDate)
-  console.log(reservations)
   selectTimeBtns.forEach(btn => {
     if(btn.value === time) {
       btn.classList.add("clicked-time-btn")
@@ -71,38 +67,40 @@ const ReservationForm = () => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Party Size:
-      <input
-        type="number"
-        min="2"
-        max="20"
-        value={numOfGuests}
-        onChange={(e) => setNumOfGuests(e.target.value)}
-        required
-      />
-      </label>
+    <div className="reservation-form-container">
+      <form className="reservation-form" onSubmit={handleSubmit}>
+        <label>Party Size:
+        <input
+          type="number"
+          min="2"
+          max="20"
+          value={numOfGuests}
+          onChange={(e) => setNumOfGuests(e.target.value)}
+          required
+        />
+        </label>
 
-      <label>Date:
-      <input
-        type="date"
-        value={date}
-        min={currentDate}
-        onChange={(e) => setDate(e.target.value)}
-        required
-      />
-      </label>
+        <label>Date:
+        <input
+          type="date"
+          value={date}
+          min={currentDate}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
+        </label>
 
-      {availableReservations.map((resTime,i) => (
-        <button className="select-time-btn" key={i} value={resTime} onClick={(e) => {
-          e.preventDefault();
-          setTime(e.target.value)
-        }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
-      )
-      )}
+        {availableReservations.map((resTime,i) => (
+          <button className="select-time-btn" key={i} value={resTime} onClick={(e) => {
+            e.preventDefault();
+            setTime(e.target.value)
+          }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
+        )
+        )}
 
-      <button type="submit">Make Reservation</button>
-    </form>
+        <button type="submit">Make Reservation</button>
+      </form>
+    </div>
   );
 }
 
