@@ -22,7 +22,7 @@ const ReservationEditForm = () => {
 
   const editTimeBtns = document.querySelectorAll(".edit-time-btn")
   editTimeBtns.forEach(btn => {
-    if(btn.value === time) {
+    if(btn.value == time) {
       btn.classList.add("clicked-edit-time-btn")
     }
     else {
