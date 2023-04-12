@@ -39,7 +39,7 @@ const RestaurantShow = () => {
 
     <div className="show-rest-left-container">
       <div className="show-rest-info-container">
-        <ol className="show-rest-info-tabs">
+        {/* <ol className="show-rest-info-tabs">
           <li>Overview</li>
           <li>Experiences</li>
           <li>Offers</li>
@@ -47,7 +47,7 @@ const RestaurantShow = () => {
           <li>Photos</li>
           <li>Menu</li>
           <li>Reviews</li>
-        </ol>
+        </ol> */}
       {restaurant && (
         <>
         <h3 className="show-rest-name">{restaurant.name}</h3>

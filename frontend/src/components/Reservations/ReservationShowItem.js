@@ -16,22 +16,23 @@ const ReservationShowItem = ({reservation}) => {
           <img src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg" alt="res-show-img"></img>
         </div>
         <div className="reservation-show-right">
-          <h3 className="reservation-rest-name">Restaurant: {restaurant.name}</h3>
+          <h3 className="reservation-rest-name"> {restaurant.name}</h3>
           <p><i className="fa-regular fa-user fa-xl fa-user-res"></i> {numOfGuests}</p>
           <p><i className="fa-sharp fa-regular fa-clock"></i>{time > 12 ? `${time % 12}` : `${time}`}:00 {time >= 12 ?"PM" : "AM"}</p>
           <p><img className="reservation-clock" src={calendar}/>{month}-{day}-{year}</p>
         </div>
 
         <div className="reservation-delete-edit-btns">
+          <Link to={`/reservations/${reservation.id}/edit`}>
+            <button className="edit-reservation-btn">
+              <i className="fa-regular fa-pen-to-square edit-res-icon"></i>
+            </button>
+          </Link>
           <button className="delete-reservation-btn" onClick={() => {
                   dispatch(deleteReservation(reservation.id))
                   }}><img className="delete-res-icon" src={trash}/>
           </button>
-          <Link>
-          <button className="edit-reservation-btn">
-            <i className="fa-regular fa-pen-to-square edit-res-icon"></i>
-          </button>
-         </Link>
+          
         </div>
       </div>
   )

@@ -6,6 +6,7 @@ import RestaurantsIndex from './components/Restaurants/RestaurantsIndex';
 import RestaurantShow from './components/Restaurants/RestaurantShow';
 import RestaurantsSplashPage from "./components/Restaurants/RestaurantsSplashPage"
 import EditReviewForm from './components/Reviews/EditReviewForm';
+import ReservationEditForm from './components/Reservations/ReservationEditForm';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
     </Switch>
     <Route exact path="/reviews/:id/edit">
       <EditReviewForm/>
+    </Route>
+    <Route exact path="/reservations/:id/edit">
+      <ReservationEditForm/>
     </Route>
     </>
   );
