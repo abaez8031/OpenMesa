@@ -69,6 +69,7 @@ const ReservationForm = () => {
   return (
     <div className="reservation-form-container">
       <form className="reservation-form" onSubmit={handleSubmit}>
+        <h3>Create Reservation</h3>
         <label>Party Size:
         <input
           type="number"
@@ -98,7 +99,7 @@ const ReservationForm = () => {
         )
         )}
 
-        <button type="submit">Make Reservation</button>
+        <button className="make-res-button" type="submit">Make Reservation</button>
       </form>
     </div>
   );

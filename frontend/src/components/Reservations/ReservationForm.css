@@ -11,3 +11,25 @@
 .clicked-time-btn {
   background-color: gray;
 }
+
+.reservation-form h3 {
+  font-size: 36px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.reservation-form {
+  padding-top: 0;
+  height: 100%;
+  width: 100%
+}
+
+.reservation-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 546px;
+}
+
+.make-res-button {
+  margin-bottom: 25px;
+}
