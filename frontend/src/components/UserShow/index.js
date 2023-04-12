@@ -10,7 +10,6 @@ const UserShow = () => {
   const currentUser = useSelector(state => state.session.user)
   const { userId } = useParams();
   const reservations = useSelector(getReservations).filter(reservation => reservation.userId === currentUser.id)
-  console.log(reservations)
 
   useEffect(() => {
     dispatch(fetchReservations())
