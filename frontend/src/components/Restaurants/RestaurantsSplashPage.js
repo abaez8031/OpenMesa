@@ -15,17 +15,18 @@ const RestaurantsSplashPage = () => {
   
   useEffect(() => {
     dispatch(getRestaurants());
-    const scrollLeftBtn = document.querySelector(".scroll-left-btn")
-    const scrollRightBtn = document.querySelector(".scroll-right-btn")
-    const scroller = document.querySelector(".restaurant-scroller")
-    const scrollLeft = (e) => {
-      scroller.scrollLeft -= 300
+    const scrollLeftBtns = document.querySelectorAll(".scroll-left-btn")
+    const scrollRightBtns = document.querySelectorAll(".scroll-right-btn")
+    const scrollers = document.querySelectorAll(".restaurant-scroller")
+    
+    for(let i = 0; i < scrollers.length; i++) {
+      scrollLeftBtns[i].addEventListener("click", () => {
+        scrollers[i].scrollLeft -= 300
+      });
+      scrollRightBtns[i].addEventListener("click", () => {
+        scrollers[i].scrollLeft += 300
+      });  
     }
-    const scrollRight = (e) => {
-      scroller.scrollLeft += 300
-    }
-    scrollLeftBtn.addEventListener("click",scrollLeft);
-    scrollRightBtn.addEventListener("click",scrollRight);
   }, [dispatch])
 
   return (
