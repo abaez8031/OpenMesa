@@ -10,6 +10,8 @@ const ReservationForm = () => {
   const currentUser = useSelector(state => state.session.user);
   const reservations = useSelector(getReservations).filter(reservation => reservation.userId == currentUser.id && reservation.restaurantId == id)
 
+  console.log(currentUser)
+
   const nextHour = new Date().getHours() + 1
   const [numOfGuests, setNumOfGuests] = useState(2);
   const [date, setDate] = useState("");
@@ -32,12 +34,16 @@ const ReservationForm = () => {
 
   if (date === currentDate) {
     for(let i = nextHour; i >= 8 && i <= 16; i++) {
-      availableReservations.push(i)
+      if(!reservations.some(reservation => reservation.time === i)) {
+        availableReservations.push(i)
+      }
     }
   }
   else {
     for(let i = 8; i <= 16; i ++) {
-      availableReservations.push(i)
+      if(!reservations.some(reservation => reservation.time === i)) {
+        availableReservations.push(i)
+      }
     }
   }
   
