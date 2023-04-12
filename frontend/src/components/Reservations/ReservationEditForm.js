@@ -60,12 +60,13 @@ const ReservationEditForm = () => {
     setDate("")
     setTime("")
     setNumOfGuests(2)
+    window.location.replace(`/users/${reservation.userId}`);
   }
 
   return (
     <div className="edit-reservation-form-container">
-      <form className="edit-reservation-form" onSubmit={handleSubmit}>
       {restaurant && (<h3>Update Reservation at {restaurant}</h3>)}
+      <form className="edit-reservation-form" onSubmit={handleSubmit}>
         <label>Party Size:
           <input
             type="number"

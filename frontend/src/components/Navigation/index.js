@@ -6,7 +6,7 @@ import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
 import openMesaLogo from "../../assets/pngwing.com.png"
-import githubLogo from "../../assets/pngaaa.com-94893.png"
+import githubLogo from "../../assets/icons8-github-50.png"
 import linkedinLogo from "../../assets/icons8-linkedin-64.png"
 
 
@@ -30,9 +30,9 @@ const  Navigation = () => {
   return (
     <ul className='nav-bar'>
       <NavLink exact to="/" className="openmesa-nav-link"> <img className='openmesa-logo' src={openMesaLogo}></img> <span className="openmesa-text">OpenMesa</span></NavLink>
-      {/* <a href="https://github.com/abaez8031/OpenMesa"><button><img src={githubLogo}/></button></a> */}
+      <a href="https://github.com/abaez8031/OpenMesa"><img className="github-logo" src={githubLogo}/></a>
 
-      {/* <button ><img src={linkedinLogo}/></button> */}
+      <img className="linkedin-logo" src={linkedinLogo}/>
 
         {sessionLinks}
     </ul>
