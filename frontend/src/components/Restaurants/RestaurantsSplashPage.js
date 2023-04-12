@@ -7,16 +7,12 @@ import { getRestaurants } from "../../store/restaurants";
 const RestaurantsSplashPage = () => {
   const dispatch = useDispatch();
   const restaurants = useSelector(state => Object.values(state.restaurants))
-  const colombianRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Colombian").sort(() => 0.5 - Math.random()).slice(0, 5)
-  const mexicanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Mexican").sort(() => 0.5 - Math.random()).slice(0, 5)
-  const dominicanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Dominican").sort(() => 0.5 - Math.random()).slice(0, 5)
-  const brazilianRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Brazilian").sort(() => 0.5 - Math.random()).slice(0, 5)
-  const venezuelanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Venezuelan").sort(() => 0.5 - Math.random()).slice(0, 5)
+  const colombianRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Colombian").sort(() => 0.5 - Math.random()).slice(0, 8)
+  const mexicanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Mexican").sort(() => 0.5 - Math.random()).slice(0, 8)
+  const dominicanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Dominican").sort(() => 0.5 - Math.random()).slice(0, 8)
+  const brazilianRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Brazilian").sort(() => 0.5 - Math.random()).slice(0, 8)
+  const venezuelanRestaurants = restaurants.filter(restaurant => restaurant.cuisine === "Venezuelan").sort(() => 0.5 - Math.random()).slice(0, 8)
   
-  // console.log(mexicanRestaurants)
-  // console.log(colombianRestaurants)
-  
-
   useEffect(() => {
     dispatch(getRestaurants());
     const scrollLeftBtn = document.querySelector(".scroll-splash-left-btn")
@@ -99,7 +95,6 @@ const RestaurantsSplashPage = () => {
         </div>
         <button className="scroll-splash-right-btn">&gt;</button>
       </div>
-
     </div>
   )
 }
