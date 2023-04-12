@@ -15,8 +15,8 @@ const RestaurantsSplashPage = () => {
   
   useEffect(() => {
     dispatch(getRestaurants());
-    const scrollLeftBtn = document.querySelector(".scroll-splash-left-btn")
-    const scrollRightBtn = document.querySelector(".scroll-splash-right-btn")
+    const scrollLeftBtn = document.querySelector(".scroll-left-btn")
+    const scrollRightBtn = document.querySelector(".scroll-right-btn")
     const scroller = document.querySelector(".restaurant-scroller")
     const scrollLeft = (e) => {
       scroller.scrollLeft -= 300
@@ -35,65 +35,65 @@ const RestaurantsSplashPage = () => {
       </div>
 
       <div className="restaurant-scroller-container">
-        <button className="scroll-splash-left-btn">	&lt;</button>
+        <button className="scroll-left-btn">	&lt;</button>
         <div className="restaurant-scroller">
           {colombianRestaurants.map(restaurant => (
             <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
           ))}
         </div>
-        <button className="scroll-splash-right-btn">&gt;</button>
+        <button className="scroll-right-btn">&gt;</button>
       </div>
 
       <div className="splash-header">
         <h3>Mexican Restaurants</h3>
       </div>
       <div className="restaurant-scroller-container">
-        <button className="scroll-splash-left-btn">&lt;</button>
+        <button className="scroll-left-btn">&lt;</button>
         <div className="restaurant-scroller">
           {mexicanRestaurants.map(restaurant => (
             <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
           ))}
         </div>
-        <button className="scroll-splash-right-btn">&gt;</button>
+        <button className="scroll-right-btn">&gt;</button>
       </div>
       
       <div className="splash-header">
         <h3>Dominican Restaurants</h3>
       </div>
       <div className="restaurant-scroller-container">
-        <button className="scroll-splash-left-btn">	&lt;</button>
+        <button className="scroll-left-btn">	&lt;</button>
         <div className="restaurant-scroller">
           {dominicanRestaurants.map(restaurant => (
             <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
           ))}
         </div>
-        <button className="scroll-splash-right-btn">&gt;</button>
+        <button className="scroll-right-btn">&gt;</button>
       </div>
 
       <div className="splash-header">
         <h3>Brazilian Restaurants</h3>
       </div>
       <div className="restaurant-scroller-container">
-        <button className="scroll-splash-left-btn">	&lt;</button>
+        <button className="scroll-left-btn">	&lt;</button>
         <div className="restaurant-scroller">
           {brazilianRestaurants.map(restaurant => (
             <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
           ))}
         </div>
-        <button className="scroll-splash-right-btn">&gt;</button>
+        <button className="scroll-right-btn">&gt;</button>
       </div>
 
       <div className="splash-header">
         <h3>Venezuelan Restaurants</h3>
       </div>
       <div className="restaurant-scroller-container">
-        <button className="scroll-splash-left-btn">	&lt;</button>
+        <button className="scroll-left-btn">	&lt;</button>
         <div className="restaurant-scroller">
           {venezuelanRestaurants.map(restaurant => (
             <RestaurantSplashItem key={restaurant.id} restaurant={restaurant}/>
           ))}
         </div>
-        <button className="scroll-splash-right-btn">&gt;</button>
+        <button className="scroll-right-btn">&gt;</button>
       </div>
     </div>
   )
