@@ -54,3 +54,8 @@ input:focus {
   border: .8px groove rgb(192, 192, 192);
   cursor: pointer;
 }
+
+.login-form-container {
+  display:flex;
+  justify-content: center;
+}

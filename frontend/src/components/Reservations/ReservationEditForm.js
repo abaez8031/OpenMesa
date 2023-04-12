@@ -18,7 +18,7 @@ const ReservationEditForm = () => {
   console.log(month,day,year)
   const currentDate = new Date(year, month - 1, day).toISOString().split("T")[0]
   let reservation = useSelector(getReservation(id))
-  const restaurant = reservation.restaurant.name
+  const restaurant = reservation?.restaurant.name
 
   const editTimeBtns = document.querySelectorAll(".edit-time-btn")
   editTimeBtns.forEach(btn => {
@@ -64,7 +64,7 @@ const ReservationEditForm = () => {
 
   return (
     <>
-    <h3>{restaurant}</h3>
+    {restaurant && (<h3>{restaurant}</h3>)}
     <form onSubmit={handleSubmit}>
       <label>Party Size:
         <input

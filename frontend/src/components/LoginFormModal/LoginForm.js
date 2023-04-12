@@ -32,29 +32,31 @@ const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      {/* <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul> */}
+    <div className="login-form-container">
+      <form onSubmit={handleSubmit}>
+        {/* <ul>
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul> */}
 
-      {errors.length > 0 && (<p className="error-messages">* {errors[0]}</p>)}
-        <input
-          placeholder="Email Address"
-          type="text"
-          value={emailAddress}
-          onChange={(e) => setEmailAddress(e.target.value)}
-          required
-        />
-        <input
-          placeholder="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      <button type="submit">Log In</button>
-      <button className="demo-login" onClick={loginDemoUser}> Login Demo User</button>
-    </form>
+        {errors.length > 0 && (<p className="error-messages">* {errors[0]}</p>)}
+          <input
+            placeholder="Email Address"
+            type="text"
+            value={emailAddress}
+            onChange={(e) => setEmailAddress(e.target.value)}
+            required
+          />
+          <input
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        <button type="submit">Log In</button>
+        <button className="demo-login" onClick={loginDemoUser}> Login Demo User</button>
+      </form>
+    </div>
   );
 }
 

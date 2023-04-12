@@ -25,7 +25,7 @@ const EditReviewForm = () => {
     dispatch(fetchReview(id));
     setRating(review?.rating);
     setBody(review?.body)
-  },[dispatch, id])
+  },[dispatch, id,review])
 
   const handleSubmit = (e) => {
     e.preventDefault();
