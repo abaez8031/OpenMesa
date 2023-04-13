@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   namespace :api, defaults: { format: :json } do
+    get "restaurants/search", to: "restaurants#search"
     resources :users, only: [:create, :show, :update, :destroy]
     resource :session, only: [:show, :create, :destroy]
     resources :restaurants, only: [:index, :show] do

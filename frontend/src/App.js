@@ -7,6 +7,8 @@ import RestaurantShow from './components/Restaurants/RestaurantShow';
 import RestaurantsSplashPage from "./components/Restaurants/RestaurantsSplashPage"
 import EditReviewForm from './components/Reviews/EditReviewForm';
 import ReservationEditForm from './components/Reservations/ReservationEditForm';
+import Search from './components/Restaurants/SearchShow';
+
 
 
 function App() {
@@ -34,6 +36,9 @@ function App() {
     </Route>
     <Route exact path="/reservations/:id/edit">
       <ReservationEditForm/>
+    </Route>
+    <Route path="/search">
+      <Search/>
     </Route>
     </>
   );

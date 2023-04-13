@@ -4,12 +4,14 @@ import sessionReducer from "./session";
 import restaurantsReducer from "./restaurants";
 import reviewsReducer from "./reviews";
 import reservationsReducer from "./reservations";
+import searchReducer from "./search";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   restaurants: restaurantsReducer,
   reviews: reviewsReducer,
-  reservations: reservationsReducer
+  reservations: reservationsReducer,
+  searchResults: searchReducer
 })
 
 let enhancer;
