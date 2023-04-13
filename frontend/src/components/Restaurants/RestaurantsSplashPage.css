@@ -49,6 +49,7 @@
   left: -25px;
   z-index: 1;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
 }
 
 .scroll-right-btn {
