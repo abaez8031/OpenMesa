@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReview, getReview, updateReview } from "../../store/reviews";
-import { useParams} from "react-router-dom";
+import { useParams, Redirect} from "react-router-dom";
 import "./EditReviewForm.css"
 
 const EditReviewForm = () => {
@@ -59,6 +59,8 @@ const EditReviewForm = () => {
 
   return (
     <>
+      {(!review || currentUser?.id !== review.userId) && (<Redirect to="/"></Redirect>) }
+
       {review && review.userId === currentUser.id &&
       <div className="edit-review-form-container">
         <div className="edit-review-form-header">

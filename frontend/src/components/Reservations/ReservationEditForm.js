@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { fetchReservation } from "../../store/reservations";
 import { getReservation } from "../../store/reservations";
@@ -66,6 +66,8 @@ const ReservationEditForm = () => {
 
   return (
     <>
+      {(!reservation || currentUser?.id !== reservation.userId) && (<Redirect to="/"></Redirect>) }
+      
       {reservation && reservation.userId === currentUser?.id && (<div className="edit-reservation-form-container">
         {restaurant && (<h3>Update Reservation at {restaurant}</h3>)}
         <form className="edit-reservation-form" onSubmit={handleSubmit}>

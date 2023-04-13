@@ -30,8 +30,8 @@ const  Navigation = () => {
   return (
     <ul className='nav-bar'>
       <NavLink exact to="/" className="openmesa-nav-link"> <img className='openmesa-logo' src={openMesaLogo}></img> <span className="openmesa-text">OpenMesa</span></NavLink>
-      <a href="https://github.com/abaez8031/OpenMesa"><img className="github-logo" src={githubLogo}/></a>
 
+      <a href="https://github.com/abaez8031/OpenMesa"><img className="github-logo" src={githubLogo}/></a>
       <img className="linkedin-logo" src={linkedinLogo}/>
 
         {sessionLinks}
