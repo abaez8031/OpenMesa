@@ -9,6 +9,7 @@ const EditReviewForm = () => {
   const { id } = useParams();
   const [rating, setRating] = useState(0);
   const [body, setBody] = useState("")
+  const currentUser = useSelector(state => state.session.user)
   const reviewStars = document.querySelectorAll(".review-form-star");
   let review = useSelector(getReview(id));
 
@@ -57,42 +58,45 @@ const EditReviewForm = () => {
   }
 
   return (
-    <div className="edit-review-form-container">
-      <div className="edit-review-form-header">
-        <h3>Update Review</h3>
-      </div>
-      <form onSubmit={handleSubmit}
-      className="edit-review-form">
-        <div className="edit-review-form-body">
-          <textarea
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-            required
-            rows={5}
-            maxLength={1000}
-            className="edit-review-textarea"
-          />
-          <div className="review-form-body-info">
-            <p className="length-of-body">{body?.length}/1000 characters</p>
-          </div>
+    <>
+      {review && review.userId === currentUser.id &&
+      <div className="edit-review-form-container">
+        <div className="edit-review-form-header">
+          <h3>Update Review</h3>
         </div>
+        <form onSubmit={handleSubmit}
+        className="edit-review-form">
+          <div className="edit-review-form-body">
+            <textarea
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+              required
+              rows={5}
+              maxLength={1000}
+              className="edit-review-textarea"
+            />
+            <div className="review-form-body-info">
+              <p className="length-of-body">{body?.length}/1000 characters</p>
+            </div>
+          </div>
 
-      <div className="review-form-stars">
+        <div className="review-form-stars">
 
-      <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={1}></i></span>
+        <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={1}></i></span>
 
-      <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={2}></i></span>
+        <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={2}></i></span>
 
-      <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={3}></i></span>
+        <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={3}></i></span>
 
-      <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={4}></i></span>
+        <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={4}></i></span>
 
-      <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={5}></i></span>
+        <span onClick={handleStarClick}><i className="fa-sharp fa-solid fa-star review-form-star" data-value={5}></i></span>
 
-      </div>
-        <button type="submit">Update Review</button>
-      </form>
-    </div>
+        </div>
+          <button type="submit">Update Review</button>
+        </form>
+      </div>}
+    </>
   )
 }
 

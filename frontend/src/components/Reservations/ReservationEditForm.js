@@ -9,13 +9,14 @@ import "./ReservationEditForm.css"
 const ReservationEditForm = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  const currentUser = useSelector(state => state.session.user)
+  console.log(currentUser)
   const nextHour = new Date().getHours() + 1
   const [numOfGuests, setNumOfGuests] = useState(2);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("")
   let availableReservations = [];
   const [month,day,year] = new Date().toLocaleDateString("en-US", { timeZone: "America/New_York" }).split("/");
-  console.log(month,day,year)
   const currentDate = new Date(year, month - 1, day).toISOString().split("T")[0]
   let reservation = useSelector(getReservation(id))
   const restaurant = reservation?.restaurant.name
@@ -64,40 +65,42 @@ const ReservationEditForm = () => {
   }
 
   return (
-    <div className="edit-reservation-form-container">
-      {restaurant && (<h3>Update Reservation at {restaurant}</h3>)}
-      <form className="edit-reservation-form" onSubmit={handleSubmit}>
-        <label>Party Size:
-          <input
-            type="number"
-            min="2"
-            max="20"
-            value={numOfGuests}
-            onChange={(e) => setNumOfGuests(e.target.value)}
-            required
-          />
-        </label>
+    <>
+      {reservation && reservation.userId === currentUser?.id && (<div className="edit-reservation-form-container">
+        {restaurant && (<h3>Update Reservation at {restaurant}</h3>)}
+        <form className="edit-reservation-form" onSubmit={handleSubmit}>
+          <label>Party Size:
+            <input
+              type="number"
+              min="2"
+              max="20"
+              value={numOfGuests}
+              onChange={(e) => setNumOfGuests(e.target.value)}
+              required
+            />
+          </label>
+            
+          <label>Date:
+            <input
+              type="date"
+              value={date}
+              min={currentDate}
+              onChange={(e) => setDate(e.target.value)}
+              required
+            />
+          </label>
+            
+          {availableReservations.map((resTime,i) => (
+            <button className="edit-time-btn" key={i} value={resTime} onClick={(e) => {
+              e.preventDefault();
+              setTime(e.target.value)
+              }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
+          ))}
           
-        <label>Date:
-          <input
-            type="date"
-            value={date}
-            min={currentDate}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
-        </label>
-          
-        {availableReservations.map((resTime,i) => (
-          <button className="edit-time-btn" key={i} value={resTime} onClick={(e) => {
-            e.preventDefault();
-            setTime(e.target.value)
-            }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
-        ))}
-        
-        <button type="submit">Update Reservation</button>
-      </form>
-    </div>
+          <button type="submit">Update Reservation</button>
+        </form>
+      </div>)}
+    </>
   );
 }
 
