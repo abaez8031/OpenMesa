@@ -9,15 +9,14 @@ const ReservationForm = () => {
   const { id } = useParams();
   const currentUser = useSelector(state => state.session.user);
   const reservations = useSelector(getReservations).filter(reservation => reservation.userId == currentUser.id && reservation.restaurantId == id)
-
-
-  const nextHour = new Date().getHours() + 1
-  const [numOfGuests, setNumOfGuests] = useState(2);
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("")
-  let availableReservations = [];
   const [month,day,year] = new Date().toLocaleDateString("en-US", { timeZone: "America/New_York" }).split("/");
   const currentDate = new Date(year, month - 1, day).toISOString().split("T")[0]
+  const nextHour = new Date().getHours() + 1
+  const [date, setDate] = useState(currentDate);
+  const [numOfGuests, setNumOfGuests] = useState(2);
+  const [time, setTime] = useState("")
+  let availableReservations = [];
+  
   const selectTimeBtns = document.querySelectorAll(".select-time-btn")
   selectTimeBtns.forEach(btn => {
     if(btn.value === time) {
@@ -27,7 +26,7 @@ const ReservationForm = () => {
       btn.classList.remove("clicked-time-btn")
     }
   })
-
+  
   if (date === currentDate) {
     for(let i = nextHour; i >= 8 && i <= 16; i++) {
       if(!reservations.some(reservation => reservation.time === i && reservation.date === date)) {
@@ -43,7 +42,7 @@ const ReservationForm = () => {
     }
   }
   
-
+  
   useEffect(() => {
     dispatch(fetchReservations())
   }, [dispatch, id])
