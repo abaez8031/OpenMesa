@@ -4,7 +4,21 @@
 
 .user-show-header {
   font-size: 48px;
-  margin-top: 16px;
+  padding-top: 16px;
   margin-bottom: 16px;
-  margin-left: 16px;
+}
+
+.user-show-container {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: white;
+  padding: 16px;
+}
+
+.user-show-page {
+  background-color: #f7f7f7;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }

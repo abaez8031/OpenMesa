@@ -17,12 +17,14 @@ const UserShow = () => {
 
   if(!currentUser || currentUser.id != userId) return <Redirect to="/"/>
   return (
-    <div>
-      <h3 className="user-show-header">Your Reservations</h3>
+    <div className="user-show-page">
+      <div className="user-show-container">
+        <h3 className="user-show-header">Your Reservations</h3>
 
-      {reservations.map(reservation => (
-        <ReservationShowItem key={reservation.id} reservation={reservation}/>
-      ))}
+        {reservations.map(reservation => (
+          <ReservationShowItem key={reservation.id} reservation={reservation}/>
+        ))}
+      </div>
     </div>
   )
 }
