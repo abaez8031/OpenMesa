@@ -9,20 +9,20 @@ const UserShow = () => {
   const dispatch = useDispatch()
   const currentUser = useSelector(state => state.session.user)
   const { userId } = useParams();
-  const reservations = useSelector(getReservations).filter(reservation => reservation.userId === currentUser.id)
+  const reservations = useSelector(getReservations).filter(reservation => reservation?.userId === currentUser?.id)
 
   useEffect(() => {
     dispatch(fetchReservations())
   }, [dispatch, userId])
 
-  if(!currentUser || currentUser.id != userId) return <Redirect to="/"/>
+  if(!currentUser || currentUser?.id != userId) return <Redirect to="/"/>
   return (
     <div className="user-show-page">
       <div className="user-show-container">
         <h3 className="user-show-header">Your Reservations</h3>
 
         {reservations.map(reservation => (
-          <ReservationShowItem key={reservation.id} reservation={reservation}/>
+          <ReservationShowItem key={reservation?.id} reservation={reservation}/>
         ))}
       </div>
     </div>
