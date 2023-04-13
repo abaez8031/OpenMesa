@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: right;
   align-items: center;
+  width: 100%;
   padding: 1rem;
   background-color: #fff;
   height: 50px;
