@@ -1,12 +1,12 @@
 .reservation-show-info {
   box-sizing: border-box;
-  border: 1px solid gray;
-  padding: 16px;
+  border: .05px solid gray;
+  padding: 12px;
   margin-bottom: 16px;
   display: flex;
   background-color: white;
+  border-radius: 4px;
 }
-
 
 p {
   color: black;
@@ -36,25 +36,12 @@ p {
 
 .reservation-rest-name {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 20px;
 }
 
-.fa-clock {
-  color: black;
-  margin-right: 5px;
-}
-
-.fa-user-res {
-  color: black;
-  margin-right: 5px;
-}
-
-.reservation-clock {
-  margin-right: 5px;
-}
-
-.reservation-show-right h3,p {
+.reservation-show-right h3 {
   margin-left: 16px;
+  margin-bottom: 5px;
 }
 
 .reservation-delete-edit-btns {
@@ -93,4 +80,23 @@ p {
 
 .reservation-show-info:last-child {
   margin-bottom: 0;
+}
+
+.reservation-show-right img {
+  height: 20px;
+  width: 20px;
+}
+
+.reservation-show-right Link, div {
+  margin-bottom: 4px;
+}
+
+.calendar-div, .time-p, .num-of-guests-p {
+  display: flex;
+  margin-left: 16px;
+  align-items: center;
+}
+
+.reservation-show-right img {
+  margin-right: 5px;
 }
