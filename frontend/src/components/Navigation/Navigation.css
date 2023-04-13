@@ -34,7 +34,6 @@
   width: 50px;
   border: .8px groove rgb(192, 192, 192);
   cursor: pointer;
-  margin-left: 20px;
 }
 
 .profile-dropdown {
@@ -81,4 +80,11 @@
 .linkedin-logo {
   height: 40px;
   width: 40px;
+}
+
+.about-me-links {
+  margin-right: 50px;
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
 }

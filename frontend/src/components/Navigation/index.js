@@ -31,9 +31,10 @@ const  Navigation = () => {
     <ul className='nav-bar'>
       <NavLink exact to="/" className="openmesa-nav-link"> <img className='openmesa-logo' src={openMesaLogo}></img> <span className="openmesa-text">OpenMesa</span></NavLink>
 
-      <a href="https://github.com/abaez8031/OpenMesa"><img className="github-logo" src={githubLogo}/></a>
-      <img className="linkedin-logo" src={linkedinLogo}/>
-
+      <div className='about-me-links'>
+        <a href="https://github.com/abaez8031/OpenMesa"><img className="github-logo" src={githubLogo}/></a>
+        <a href="https://www.linkedin.com/in/ariel-baez-36853b26a/"><img className="linkedin-logo" src={linkedinLogo}/></a>
+      </div>
         {sessionLinks}
     </ul>
   );
