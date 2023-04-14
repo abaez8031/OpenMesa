@@ -87,3 +87,142 @@ return (
       </form>
     </div>
   );
+```
+  
+## Restaurants
+  
+Restaurants are displayed on the splash page, which filters restaurants based on the type of cuisine and selects 9 random restaurants from each category. The left and right buttons on each container scroll the container left and right.
+
+<img width="1437" alt="Screenshot 2023-04-14 at 3 26 00 PM" src="https://user-images.githubusercontent.com/113265748/232137886-b12f1aaf-217f-4bc9-8ecd-f36fb6b37ed3.png">
+
+```js
+useEffect(() => {
+    dispatch(getRestaurants());
+    const scrollLeftBtns = document.querySelectorAll(".scroll-left-btn")
+    const scrollRightBtns = document.querySelectorAll(".scroll-right-btn")
+    const scrollers = document.querySelectorAll(".restaurant-scroller")
+    
+    for(let i = 0; i < scrollers.length; i++) {
+      scrollLeftBtns[i].addEventListener("click", () => {
+        scrollers[i].scrollLeft -= 300
+      });
+      scrollRightBtns[i].addEventListener("click", () => {
+        scrollers[i].scrollLeft += 300
+      });  
+    }
+  }, [dispatch])
+```
+
+Restaurants have their own show page where you can view information about the restaurant and reviews. The number of reviews and stars in the information update upon creating a new review.
+
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/113265748/232139207-8328f129-11f2-4a0a-a02d-6facb00fd590.gif)
+
+```js
+const calculateAvgRating = () => {
+    let totalRating = 0;
+    reviews.forEach(review => {
+      totalRating += review.rating;
+    })
+    return totalRating/reviews.length
+}
+const avgRating = calculateAvgRating();
+
+useEffect(() => {
+    dispatch(getRestaurant(id));
+    dispatch(fetchReviews(id));
+}, [dispatch, id])
+  
+```
+
+## Reservations
+
+When signed in, there will be a reservation form rendered on each individual restaurant's show page. Users can make reservations anytime between 8am and 4pm. Only times and dates in the future are allowed to be selected. Users cannot make two reservations for the same time.
+
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/113265748/232140776-4528288d-3e78-4dd7-858a-9a4ffb6ae5ae.gif)
+
+```js
+
+const { id } = useParams();
+const currentUser = useSelector(state => state.session.user);
+const reservations = useSelector(getReservations).filter(reservation => reservation.userId == currentUser.id && reservation.restaurantId == id)
+
+let availableReservations = [];
+if (date === currentDate) {
+    for(let i = nextHour; i >= 8 && i <= 16; i++) {
+      if(!reservations.some(reservation => reservation.time === i && reservation.date === date)) {
+        availableReservations.push(i)
+      }
+    }
+  }
+  else {
+    for(let i = 8; i <= 16; i ++) {
+      if(!reservations.some(reservation => reservation.time === i && reservation.date === date)) {
+        availableReservations.push(i)
+      }
+    }
+  }
+  ```
+  
+Users are also allowed to edit and delete only reservations that they made for themselves. The link to the edit form is only rendered on a user's profile page, but there is a redirect in case someone tries to navigate directly to the edit url.
+
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/113265748/232141676-f00e4399-97b1-49bb-a67e-d237fb4eb801.gif)
+
+```js
+return (
+    <>
+      {(!reservation || currentUser?.id !== reservation.userId) && (<Redirect to="/"></Redirect>) }
+```
+
+## Reviews
+
+Users are allowed to create at most one review per restaurant. If there is no user signed in, or the signed in user has already left a review for the restaurant the review form will not be rendered. The star rating will update with each new review.
+
+![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/113265748/232143390-89495e66-26e8-4361-9f81-967ef6199664.gif)
+
+```js
+
+const reviews = useSelector(getReviews);
+{currentUser && !reviews.some(review => review.userId === currentUser.id) &&
+        (<CreateReviewForm/>)
+}
+```
+
+Users are also allowed to update or delete reviews that they created.
+
+![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/113265748/232143957-df584680-dabc-45e5-aa2f-ecbc68fe030d.gif)
+
+{currentUser && review.userId === currentUser.id && (
+  <div className="review-delete-edit-btns">
+    <button className="delete-review-btn" onClick={() => {
+      dispatch(deleteReview(review.id))}}>
+        <img className="delete-btn-icon" src={trash}/>
+    </button>
+    <Link to={`/reviews/${review.id}/edit`}>
+      <button className="edit-review-btn">
+        <i className="fa-regular fa-pen-to-square"></i>
+      </button>
+    </Link>
+  </div>
+)}
+
+
+## Reviews
+
+Users can search for restaurants for by name. There will be a list of restaurants matching the name rendered.
+
+![ezgif com-video-to-gif (5)](https://user-images.githubusercontent.com/113265748/232145166-27efafac-fa8d-4683-bbaf-1df065e52590.gif)
+
+```js
+
+def search
+  @restaurants = Restaurant.where("lower(name) LIKE ?", "%#{params[:query]}%")
+  render :search
+end
+
+export const fetchSearchResults = (query) => async dispatch => {
+  const res = await fetch(`/api/restaurants/search?query=${query}`);
+  const data = await res.json();
+  dispatch(receiveSearchResults(data));
+};
+  ```
