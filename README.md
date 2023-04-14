@@ -19,42 +19,8 @@ An OpenMesa user is able to create new profiles, which persist to both the front
 
 <img width="1437" alt="Screenshot 2023-04-14 at 3 14 47 PM" src="https://user-images.githubusercontent.com/113265748/232136558-bdfeb8fc-6cca-40fb-ae61-0b1bbfcbc126.png">
 
-const SignupForm = () => {
-  const dispatch = useDispatch();
-  const [emailAddress, setEmailAddress] = useState("");
-  const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [primaryDiningLocation, setPrimaryDiningLocation] = useState("")
-  const [errors, setErrors] = useState([]);
-  const loginDemoUser = () => {
-    dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}))
-  }
-
-
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    {
-      setErrors([]);
-      return dispatch(sessionActions.signup({ emailAddress, password, firstName, lastName, phoneNumber, primaryDiningLocation }))
-        .catch(async (res) => {
-        let data;
-        try {
-          data = await res.clone().json();
-        } catch {
-          data = await res.text();
-        }
-        if (data?.errors) setErrors(data.errors);
-        else if (data) setErrors([data]);
-        else setErrors([res.statusText]);
-      });
-    }
-  };
-  
-  return (
+```js
+return (
     <div className="signup-form-container">
       <form onSubmit={handleSubmit}>
         
@@ -121,4 +87,3 @@ const SignupForm = () => {
       </form>
     </div>
   );
-}
