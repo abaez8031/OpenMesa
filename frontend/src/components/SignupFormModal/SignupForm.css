@@ -52,3 +52,9 @@ input:focus {
   border: .8px groove rgb(192, 192, 192);
   cursor: pointer;
 }
+
+.signup-form-container {
+  height: 760px;
+  width: 460px;
+  display: flex;
+}

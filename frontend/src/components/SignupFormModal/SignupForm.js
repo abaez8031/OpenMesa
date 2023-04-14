@@ -40,74 +40,74 @@ const SignupForm = () => {
   };
   
   return (
-    <>
-    <form onSubmit={handleSubmit}>
-      {/* <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul> */}
-      
-        <input
-        placeholder="Email Address"
-          type="text"
-          value={emailAddress}
-          onChange={(e) => setEmailAddress(e.target.value)}
-          required
-        />
-        {errors.includes("Email address is invalid") && (
-          <p className="error-messages">* Email address is invalid</p>
-        )}
+    <div className="signup-form-container">
+      <form onSubmit={handleSubmit}>
+        {/* <ul>
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul> */}
         
-        <input
-          placeholder="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        {errors.includes("Password is too short (minimum is 6 characters)") && (
-          <p className="error-messages">* Password is too short (minimum is 6 characters)</p>
-        )}
-        <input 
-          placeholder="First Name"
-          type="text"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          required
-        />
-        <input 
-          placeholder="Last Name"
-          type="text"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          required
-        />
-        <input 
-          placeholder="Phone Number"
-          type="tel"
-          value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          required
-        />
-        {errors.includes("Phone number is not a number") && (
-          <p className="error-messages">* Phone number is not a number</p>
-        )}
-        <select 
-          id="primary_dining_loc" 
-          value={primaryDiningLocation}
-          onChange={(e) => setPrimaryDiningLocation(e.target.value)}
-          required
-          > 
-          <option hidden>Select a Primary Dining Location</option>
-          <option>New York City</option>
-          </select>
-          {errors.includes("Primary dining location can't be blank") && (
-          <p className="error-messages">*Primary dining location can't be blank</p>
-        )}
+          <input
+          placeholder="Email Address"
+            type="text"
+            value={emailAddress}
+            onChange={(e) => setEmailAddress(e.target.value)}
+            required
+          />
+          {errors.includes("Email address is invalid") && (
+            <p className="error-messages">* Email address is invalid</p>
+          )}
+          
+          <input
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          {errors.includes("Password is too short (minimum is 6 characters)") && (
+            <p className="error-messages">* Password is too short (minimum is 6 characters)</p>
+          )}
+          <input 
+            placeholder="First Name"
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+          <input 
+            placeholder="Last Name"
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+          <input 
+            placeholder="Phone Number"
+            type="tel"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            required
+          />
+          {errors.includes("Phone number is not a number") && (
+            <p className="error-messages">* Phone number is not a number</p>
+          )}
+          <select 
+            id="primary_dining_loc" 
+            value={primaryDiningLocation}
+            onChange={(e) => setPrimaryDiningLocation(e.target.value)}
+            required
+            > 
+            <option hidden>Select a Primary Dining Location</option>
+            <option>New York City</option>
+            </select>
+            {errors.includes("Primary dining location can't be blank") && (
+            <p className="error-messages">*Primary dining location can't be blank</p>
+          )}
 
-      <button type="submit">Sign Up</button>
-    <button className="demo-login" onClick={loginDemoUser}> Login Demo User</button>
-    </form>
-    </>
+        <button type="submit">Sign Up</button>
+      <button className="demo-login" onClick={loginDemoUser}> Login Demo User</button>
+      </form>
+    </div>
   );
 }
 
