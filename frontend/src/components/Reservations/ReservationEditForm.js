@@ -10,7 +10,6 @@ const ReservationEditForm = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const currentUser = useSelector(state => state.session.user)
-  console.log(currentUser)
   const nextHour = new Date().getHours() + 1
   const [numOfGuests, setNumOfGuests] = useState(2);
   const [date, setDate] = useState("");
