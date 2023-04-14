@@ -26,7 +26,7 @@ const SearchBar = () => {
 
   return (
     <div className="search-bar">
-      <input onChange={handleSearch} type="text" placeholder="Location, Restaurant or Cuisine"></input>
+      <input className="search-input" onChange={handleSearch} type="text" placeholder="Location, Restaurant or Cuisine"></input>
       <button onClick={handleSearchSubmit}className="submit-search-btn">Let's Go</button>
     </div>
   )
