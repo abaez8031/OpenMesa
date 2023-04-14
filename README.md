@@ -192,6 +192,7 @@ Users are also allowed to update or delete reviews that they created.
 
 ![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/113265748/232143957-df584680-dabc-45e5-aa2f-ecbc68fe030d.gif)
 
+```js
 {currentUser && review.userId === currentUser.id && (
   <div className="review-delete-edit-btns">
     <button className="delete-review-btn" onClick={() => {
@@ -205,7 +206,7 @@ Users are also allowed to update or delete reviews that they created.
     </Link>
   </div>
 )}
-
+```
 
 ## Reviews
 
