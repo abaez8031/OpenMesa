@@ -10,7 +10,9 @@ const LoginForm = () => {
   const [errors, setErrors] = useState([]);
   
   const loginDemoUser = () => {
-    dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}))
+    setEmailAddress("example@gmail.com");
+    setPassword('password');
+    dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}));
   }
 
   
