@@ -1,0 +1,13 @@
+.search-show-bar {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  background-image: url(//cdn.otstatic.com/cfe/12/images/dtp-mobile-dadc6f.png);
+}
+
+.search-show-bar-input {
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

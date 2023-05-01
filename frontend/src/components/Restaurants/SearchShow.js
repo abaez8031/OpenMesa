@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import RestaurantSearchItem from "./RestaurantSearchItem";
 import "./RestaurantSearchItem.css"
+import SearchBar from "../ReservationSearch/SearchBar";
+import "./SearchShow.css"
 
 const Search = () => {
     const dispatch = useDispatch();
@@ -16,6 +18,12 @@ const Search = () => {
 
     const searchResults = useSelector((state) => Object.values(state.searchResults));
     return(
+        <>
+        <div className="search-show-bar">
+        <div className="search-show-bar-input">
+        <SearchBar/>
+        </div>
+        </div>
         <div className="restaurant-search-list-container">
             <div className="restaurant-search-list">
                 {searchResults.map(restaurant => (
@@ -25,6 +33,7 @@ const Search = () => {
                 )}
             </div>
         </div>
+        </>
     );
 }
 export default Search;

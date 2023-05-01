@@ -98,6 +98,7 @@ const ReservationForm = () => {
           }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
         )
         )}
+        {availableReservations.length === 0 && <p>No more reservations available today</p>}
 
         <button className="make-res-button" type="submit">Make Reservation</button>
       </form>
