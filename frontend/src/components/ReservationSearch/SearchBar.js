@@ -14,13 +14,13 @@ const SearchBar = () => {
     e.preventDefault();
     const query = e.target.value;
     await setSearchText(query);
-    dispatch(fetchSearchResults(query))
   }
-
+  
   function handleSearchSubmit(e) {
     e.preventDefault();
     if (searchText.length > 0) {
       history.push(`/search?restaurants=${searchText}`)
+      dispatch(fetchSearchResults(searchText))
     }
   }
 

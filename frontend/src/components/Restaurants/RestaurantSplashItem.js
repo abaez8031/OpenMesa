@@ -1,7 +1,7 @@
 import "./RestaurantSplashItem.css"
 
 const RestaurantSplashItem = ({restaurant}) => {
-  const { id, name, phoneNumber, address, cuisine, description, reviews } = restaurant;
+  const { id, name, cuisine, reviews } = restaurant;
   const calculateAvgRating = () => {
     let totalRating = 0;
     reviews.forEach(review => {
