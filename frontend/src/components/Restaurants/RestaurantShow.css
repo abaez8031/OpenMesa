@@ -193,6 +193,14 @@
   cursor: pointer;
 }
 
+.delete-review-btn:hover {
+  background-color: silver;
+}
+
+.edit-review-btn:hover {
+  background-color: silver;
+}
+
 .edit-review-btn {
   margin-top: 10px;
   float: right;
