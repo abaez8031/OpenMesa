@@ -26,6 +26,11 @@ const Search = () => {
         </div>
         <div className="restaurant-search-list-container">
             <div className="restaurant-search-list">
+                {searchResults.length === 0 && 
+                <div className="search-no-results">
+                    <p className="search-no-results">No Results Found...</p>
+                    </div>
+                    }
                 {searchResults.map(restaurant => (
                     <RestaurantSearchItem restaurant={restaurant}/>
                 )
