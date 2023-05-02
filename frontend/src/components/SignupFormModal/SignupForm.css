@@ -1,4 +1,4 @@
-form {
+.signup-form-container form {
   padding-top: 150px;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@ form {
   background-color: #f7f7f7;
 }
 
-button[type="submit"], .demo-login {
+.signup-form-container button[type="submit"], .demo-login {
   background-color: #d10000;
   color: #ffffff;
   text-align: center;
@@ -22,8 +22,8 @@ button[type="submit"], .demo-login {
   cursor: pointer;
 }
 
-input,
-select {
+.signup-form-container input,
+.signup-form-container select {
   border: 1px solid #cccccc;
   border-radius: 4px;
   padding: 10px;
@@ -37,7 +37,7 @@ select {
   margin-bottom: 10px;
 }
 
-input:focus {
+.signup-form-container input:focus {
   border-color: #007dcc;
 }
 

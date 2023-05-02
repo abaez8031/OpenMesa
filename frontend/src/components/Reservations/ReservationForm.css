@@ -15,22 +15,55 @@
 
 .reservation-form h3 {
   font-size: 36px;
-  margin-top: 25px;
+  margin-top: 12px;
   margin-bottom: 25px;
 }
 
 .reservation-form {
   padding-top: 0;
   height: 100%;
-  width: 100%
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px #2d333f33;
+  border-radius: 4px;
+  z-index: 1;
+  padding: 16px;
 }
 
 .reservation-form-container {
   display: flex;
   flex-direction: column;
-  width: 546px;
+  width: 320px;
+  height: 330px;
+  display: block;
+  transform: translateY(-60px);
 }
 
 .make-res-button {
   margin-bottom: 25px;
+}
+
+.reservation-form h3 {
+  border-bottom: 1px solid #d8d9db;
+  padding-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+#party-size-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.party-size-select {
+  background: white;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid #d8d9db;
+  font-weight: normal;
 }
