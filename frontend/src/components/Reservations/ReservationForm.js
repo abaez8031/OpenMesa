@@ -116,17 +116,10 @@ const ReservationForm = () => {
                 {availableReservations.map(resTime => (
                   <option value={resTime}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</option>
                 ))}
+                {availableReservations.length === 0 && <option disabled>No more reservations available for this day</option>}
               </select>
             </div>
           </div>
-          {/* {availableReservations.map((resTime,i) => (
-            <button className="select-time-btn" key={i} value={resTime} onClick={(e) => {
-              e.preventDefault();
-              setTime(e.target.value)
-            }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
-          )
-          )} */}
-          {availableReservations.length === 0 && <p>No more reservations available today</p>}
 
           <button className="make-res-button" type="submit">Find a time</button>
         </div>
