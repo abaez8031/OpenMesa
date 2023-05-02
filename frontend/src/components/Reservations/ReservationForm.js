@@ -98,26 +98,37 @@ const ReservationForm = () => {
             </select>
           </div>
 
-          <label>Date:
-          <input
-            type="date"
-            value={date}
-            min={currentDate}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
-          </label>
+          <div className="reservation-time-date-container">
+            <div className="reservation-date-select">
+            <label for="reservation-date">Date</label>
+            <input
+              type="date"
+              value={date}
+              min={currentDate}
+              onChange={(e) => setDate(e.target.value)}
+              required
+            />
+            </div>
 
-          {availableReservations.map((resTime,i) => (
+            <div className="reservation-time-select">
+              <label for="reservation-time">Time</label>
+              <select name="reservation-time" onChange={(e) => setTime(e.target.value)}>
+                {availableReservations.map(resTime => (
+                  <option value={resTime}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+          {/* {availableReservations.map((resTime,i) => (
             <button className="select-time-btn" key={i} value={resTime} onClick={(e) => {
               e.preventDefault();
               setTime(e.target.value)
             }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
           )
-          )}
+          )} */}
           {availableReservations.length === 0 && <p>No more reservations available today</p>}
 
-          <button className="make-res-button" type="submit">Make Reservation</button>
+          <button className="make-res-button" type="submit">Find a time</button>
         </div>
       </form>
     </div>

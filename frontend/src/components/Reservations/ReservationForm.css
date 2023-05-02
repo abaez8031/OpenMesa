@@ -41,6 +41,14 @@
 
 .make-res-button {
   margin-bottom: 25px;
+  background-color: #da3743;
+  color: white;
+  border: none;
+  height: 48px;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: 700px;
+  font-size: 16px;
 }
 
 .reservation-form h3 {
@@ -66,4 +74,45 @@
   border: none;
   border-bottom: 1px solid #d8d9db;
   font-weight: normal;
+}
+
+.reservation-time-date-container {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.reservation-time-select {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 50%;
+}
+
+.reservation-date-select {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 50%;
+  margin-right: 16px;
+}
+
+.reservation-date-select label {
+  margin-bottom: 16px;
+}
+
+.reservation-time-select label {
+  margin-bottom: 16px;
+}
+
+.reservation-date-select input {
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid #d8d9db;
+}
+.reservation-time-select select {
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid #d8d9db;
 }
