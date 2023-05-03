@@ -30,7 +30,8 @@
 }
 
 .restaurant-scroller {
-  overflow: auto;
+  overflow-x: scroll;
+  /* overflow-y: scroll; */
   width: 100%;
   height: 100%;
   align-items: center;

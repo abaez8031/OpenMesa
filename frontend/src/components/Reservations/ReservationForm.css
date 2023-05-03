@@ -49,6 +49,7 @@
   width: 100%;
   font-weight: 700px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .reservation-form h3 {
