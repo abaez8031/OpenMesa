@@ -74,12 +74,12 @@ const ReservationForm = () => {
   return (
     <div>
       
-      <Modal onClose={() => {setShowCompleteResModal(false)
+      {showCompleteResModal && <Modal onClose={() => {setShowCompleteResModal(false)
         setDate("");
         setTime("");
         setNumOfGuests(2)}}>
         <ReservationCompleteMessage props={{restaurant, time, date, numOfGuests}}/>
-      </Modal>
+      </Modal>}
       <div className="reservation-form-container">
         <form className="reservation-form" onSubmit={handleSubmit}>
           <h3>Make a Reservation</h3>
