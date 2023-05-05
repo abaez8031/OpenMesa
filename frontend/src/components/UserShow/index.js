@@ -20,10 +20,14 @@ const UserShow = () => {
     <div className="user-show-page">
       <div className="user-show-container">
         <h3 className="user-show-header">Your Reservations</h3>
-
-        {reservations.map(reservation => (
-          <ReservationShowItem key={reservation?.id} reservation={reservation}/>
-        ))}
+        <div className="user-reservations-container">
+          {reservations.length === 0 && (
+            <p>You have not made any reservations yet.</p>
+          )}
+          {reservations.map(reservation => (
+            <ReservationShowItem key={reservation?.id} reservation={reservation}/>
+          ))}
+        </div>
       </div>
     </div>
   )
