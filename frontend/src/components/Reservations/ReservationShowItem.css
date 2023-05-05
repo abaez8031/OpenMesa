@@ -101,3 +101,11 @@ p {
 .reservation-show-right img {
   margin-right: 5px;
 }
+
+.delete-reservation-btn:hover {
+  background-color: orangered;
+}
+
+.edit-reservation-btn:hover {
+  background-color: orangered;
+}
