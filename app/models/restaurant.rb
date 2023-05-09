@@ -3,7 +3,7 @@ class Restaurant < ApplicationRecord
   validates :phone_number, numericality: { only_integer: true }
   validates :name, uniqueness: true
 
-  has_many_attached :photos
+  has_one_attached :photo
 
   has_many :reviews,
   class_name: :Review,
