@@ -399,8 +399,8 @@ ApplicationRecord.transaction do
   )
 
   castillo_jagua.photo.attach(
-    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elcastillodejagua.avif"),
-    filename: "elcastillodejagua.avif"
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elcastillodejagua.jpeg"),
+    filename: "elcastillodejagua.jpeg"
   )
 
   el_cofre.photo.attach(
@@ -494,8 +494,8 @@ ApplicationRecord.transaction do
   )
 
   nacho_macho.photo.attach(
-    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/nachomachotaco.avif"),
-    filename: "nachomachotaco.avif"
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/nachomachotaco.jpg"),
+    filename: "nachomachotaco.jpg"
   )
 
   nadas.photo.attach(
@@ -534,8 +534,8 @@ ApplicationRecord.transaction do
   )
 
   tamborim.photo.attach(
-    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tamborim.webp"),
-    filename: "tamborim.webp"
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tamborim.png"),
+    filename: "tamborim.png"
   )
 
   tio_pepe.photo.attach(
