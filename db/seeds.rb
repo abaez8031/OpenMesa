@@ -378,6 +378,181 @@ ApplicationRecord.transaction do
     filename: "casamono.jpeg"
   )
 
+  chavelas.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/chavelas.jpg"),
+    filename: "chavelas.jpg"
+  )
+
+  citrico.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/citrico.jpeg"),
+    filename: "citrico.jpeg"
+  )
+
+  barrio_burritos.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elbarrioburritos.jpeg"),
+    filename: "elbarrioburritos.jpeg"
+  )
+
+  budare_cafe.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elbudarecafe.jpeg"),
+    filename: "elbudarecafe.jpeg"
+  )
+
+  castillo_jagua.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elcastillodejagua.avif"),
+    filename: "elcastillodejagua.avif"
+  )
+
+  el_cofre.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elcofre.jpeg"),
+    filename: "elcofre.jpeg"
+  )
+
+  nuevo_sabor.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elnuevosaborlatino.jpeg"),
+    filename: "elnuevosaborlatino.jpeg"
+  )
+
+  rancho_colombiano.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elranchocolombiano.jpeg"),
+    filename: "elranchocolombiano.jpeg"
+  )
+
+  el_rey.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/elrey4.jpg"),
+    filename: "elrey4.jpg"
+  )
+
+  empanada_mama.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/empanadamamales.jpeg"),
+    filename: "empanadamamales.jpeg"
+  )
+
+  emporium_brasil.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/emporiumbrasil.jpeg"),
+    filename: "emporiumbrasil.jpeg"
+  )
+
+  flats_fix.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/flatsfix.jpeg"),
+    filename: "flatsfix.jpeg"
+  )
+
+  genao.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/genao.jpeg"),
+    filename: "genao.jpeg"
+  )
+
+  guacuco.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/guacuco.jpeg"),
+    filename: "guacuco.jpeg"
+  )
+
+  gueros.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/gueros.jpeg"),
+    filename: "gueros.jpeg"
+  )
+  
+  cabana_rodriguez.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/lacabanarodriguez.jpeg"),
+    filename: "lacabanarodriguez.jpeg"
+  )
+
+  la_churreria.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/lachurreria.jpeg"),
+    filename: "lachurreria.jpeg"
+  )
+
+  isla_cuchifritos.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/laislacuchifritos.jpeg"),
+    filename: "laislacuchifritos.jpeg"
+  )
+
+  la_napa.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/lanapa.jpeg"),
+    filename: "lanapa.jpeg"
+  )
+
+  mama_lupe.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/mamalupe.jpeg"),
+    filename: "mamalupe.jpeg"
+  )
+
+  maya_taqueria.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/mayataqueria.jpeg"),
+    filename: "mayataqueria.jpeg"
+  )
+
+  bella_colombia.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/mibellacolombia.jpeg"),
+    filename: "mibellacolombia.jpeg"
+  )
+
+  miss_favela.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/missfavela.jpeg"),
+    filename: "missfavela.jpeg"
+  )
+
+  nacho_macho.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/nachomachotaco.avif"),
+    filename: "nachomachotaco.avif"
+  )
+
+  nadas.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/nadasempanadas.jpeg"),
+    filename: "nadasempanadas.jpeg"
+  )
+
+  noches_colombia.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/nochesdecolombia.jpg"),
+    filename: "nochesdecolombia.jpg"
+  )
+
+  palacio_pepitos.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/palaciodelospepitos.jpeg"),
+    filename: "palaciodelospepitos.jpeg"
+  )
+
+  patacon_pisao.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/pataconpisao.jpeg"),
+    filename: "pataconpisao.jpeg"
+  )
+
+  brazuca.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/petiscobrazuca.jpg"),
+    filename: "petiscobrazuca.jpg"
+  )
+
+  santa_salsa.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/santasalsa.jpeg"),
+    filename: "santasalsa.jpeg"
+  )
+
+  tacos_guey.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tacosguey.jpeg"),
+    filename: "tacosguey.jpeg"
+  )
+
+  tamborim.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tamborim.webp"),
+    filename: "tamborim.webp"
+  )
+
+  tio_pepe.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tiopepe.jpeg"),
+    filename: "tiopepe.jpeg"
+  )
+
+  tio_pio.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tiopio.jpeg"),
+    filename: "tiopio.jpeg"
+  )
+
+  tu_cachapa.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tucachapainc.jpg"),
+    filename: "tucachapainc.jpg"
+  )
+
   puts "Creating reviews..."
   
   Review.create!(
