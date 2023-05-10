@@ -78,6 +78,7 @@
 }
 
 .reservation-time-date-container {
+  margin-top: 25px;
   display: flex;
   margin-bottom: 25px;
 }
