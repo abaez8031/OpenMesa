@@ -1,13 +1,14 @@
 .splash-rest-item {
-  width: 236px;
+  /* width: 236px;
   height: 322px;
-  border: 1px solid #d8d9db;
   margin-right: 16px;
   border-radius: 4px;
   display: inline-block;
   cursor: pointer;
   transition: margin 0.2s ease-in-out;
   vertical-align: middle;
+  border: 1px solid #d8d9db; */
+  /* overflow-y: visible; */
 }
 
 .splash-rest-info {
@@ -37,7 +38,23 @@
   margin-right: 8px;
 }
 
-.splash-rest-item:hover {
+.splash-rest-item-container {
+  /* height: fit-content;
+  border: 1px solid #d8d9db; */
+  width: 236px;
+  height: 322px;
+  border: 1px solid #d8d9db;
+  margin-right: 16px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: margin 0.2s ease-in-out;
+  vertical-align: middle;
+  /* overflow-y: visible; */
+  overflow-x: scroll;
+}
+
+.splash-rest-item-container:hover {
   /* margin-top: -3px; */
   z-index: 2;
   transform: translateY(-15px);

@@ -8,7 +8,7 @@
 
 require "open-uri"
 
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
   User.destroy_all
@@ -553,6 +553,7 @@ ApplicationRecord.transaction do
     filename: "tucachapainc.jpg"
   )
 
+
   puts "Creating reviews..."
   
   Review.create!(
@@ -827,7 +828,6 @@ ApplicationRecord.transaction do
     restaurant_id: 9,
     body: "This location is still new and space is great. I really loved their seafood empanadas and I can't enough of it. I will most likely go back because I still haven't try other stuff on their menu."
   )
-  
 
     puts "Done!"
-end
+# end

@@ -14,6 +14,7 @@ const RestaurantShow = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const restaurant = useSelector(state => state.restaurants[id]);
+  console.log(restaurant?.photoUrl)
   const reviews = useSelector(getReviews);
   const COLORS = ["aquamarine", "coral", "chartreuse", "fuchsia"]
   const currentUser = useSelector(state => state.session.user);
@@ -34,7 +35,8 @@ const RestaurantShow = () => {
   return (
     <>
     <div className="show-img-container">
-      <img src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg"></img>
+      {/* <img src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg"></img> */}
+      <img src={restaurant?.photoUrl}></img>
     </div>
 
     <div className="show-rest-left-container">
