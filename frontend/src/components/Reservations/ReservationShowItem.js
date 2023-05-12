@@ -9,13 +9,15 @@ import userIcon from "../../assets/icons8-user-24.png"
 
 const ReservationShowItem = ({reservation}) => {
   const {numOfGuests, time, restaurant, user, date} = reservation
+  console.log(reservation)
   const dispatch = useDispatch()
   const [year, month, day] = date.split("-")
+  console.log(restaurant)
 
   return (
       <div className="reservation-show-info">
         <div className="reservation-show-left">
-          <img src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg" alt="res-show-img"></img>
+          <img src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg" alt="res-show-img"/>
         </div>
         <div className="reservation-show-right">
           <Link to={`/restaurants/${restaurant.id}`}><h3 className="reservation-rest-name"> {restaurant.name}</h3></Link>
