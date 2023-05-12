@@ -1,7 +1,6 @@
 import "./RestaurantSplashItem.css"
 
 const RestaurantSplashItem = ({restaurant}) => {
-  console.log(restaurant.photoUrl)
   const { id, name, cuisine, reviews } = restaurant;
   const calculateAvgRating = () => {
     let totalRating = 0;
@@ -15,7 +14,6 @@ const RestaurantSplashItem = ({restaurant}) => {
 
   return (
     <a className="splash-rest-item-container" href={`/restaurants/${id}`}><div className="splash-rest-item">
-      {/* <div className="splash-rest-img"><img src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg"alt="splash-rest-img"/></div> */}
       <div className="splash-rest-img"><img src={restaurant?.photoUrl} alt="splash-rest-img"/></div>
 
       <div className="splash-rest-info">
