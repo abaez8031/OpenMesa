@@ -51,7 +51,6 @@
 }
 
 .splash-rest-item-container:hover {
-  /* margin-top: -3px; */
   transform: translateY(-15px);
   box-shadow: 0 2px 2px gray;
 }

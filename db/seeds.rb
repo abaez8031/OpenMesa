@@ -367,6 +367,20 @@ require "open-uri"
     cuisine: "Dominican",
     description: "From mouth-watering plantains to savory stews, Mama Lupe's menu offers a wide variety of flavorful dishes that will transport you to the heart of the Caribbean."
   )
+  fogo_chao = Restaurant.create!(
+    name: "Fogo de Chão Brazilian Steakhouse",
+    phone_number: "2129699980",
+    address: "40 W 53rd St, New York, NY 10019",
+    cuisine: "Brazilian",
+    description: "Fogo de Chão is an internationally-renowned steakhouse from Brazil that allows guests to discover what's next at every turn. Founded in Southern Brazil in 1979, Fogo elevates the centuries-old culinary art of churrasco - roasting high-quality cuts of meat over an open flame - into a cultural dining experience of discovery."
+  )
+  churrascaria_plataforma = Restaurant.create!(
+    name: "Churrascaria Plataforma",
+    phone_number: "2122450505",
+    address: "316 W 49th St, New York, NY 10019",
+    cuisine: "Brazilian",
+    description: "A parade of servers toting skewered meats and a large salad bar star at this set-price rodizio."
+  )
 
   casa_adela.photo.attach(
     io: URI.open("https://openmesa-seeds.s3.amazonaws.com/casaadela.jpeg"),
@@ -551,6 +565,16 @@ require "open-uri"
   tu_cachapa.photo.attach(
     io: URI.open("https://openmesa-seeds.s3.amazonaws.com/tucachapainc.jpg"),
     filename: "tucachapainc.jpg"
+  )
+
+  churrascaria_plataforma.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/churrascariaplataforma.jpeg"),
+    filename: "churrascariaplataforma.jpeg"
+  )
+
+  fogo_chao.photo.attach(
+    io: URI.open("https://openmesa-seeds.s3.amazonaws.com/fogodechao.jpeg"),
+    filename: "fogodechao.jpg"
   )
 
 
@@ -827,6 +851,19 @@ require "open-uri"
     user_id: 5,
     restaurant_id: 9,
     body: "This location is still new and space is great. I really loved their seafood empanadas and I can't enough of it. I will most likely go back because I still haven't try other stuff on their menu."
+  )
+  Review.create!(
+    rating: 5,
+    user_id: 3,
+    restaurant_id: 38,
+    body: "Fogo de Chao is an exceptional dining experience with top-notch food, service, and ambiance. From the Churrasco-style meats to the salad bar and attentive staff, it's a must-visit for anyone looking for an unforgettable meal."
+  )
+
+  Review.create!(
+    rating: 5,
+    user_id: 5,
+    restaurant_id: 39,
+    body: "Churrascaria Plataforma is a fantastic Brazilian steakhouse that offers an extensive selection of perfectly cooked meats and a salad bar that is simply amazing. The service is attentive and the ambiance is welcoming, making for an enjoyable dining experience."
   )
 
     puts "Done!"

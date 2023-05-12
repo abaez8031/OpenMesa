@@ -21,7 +21,6 @@
 
 .restaurant-scroller-container {
   display: flex;
-  /* max-width: 1216px; */
   max-height: 330px;
   white-space: nowrap;
   overflow: visible;
