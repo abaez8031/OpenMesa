@@ -11,7 +11,7 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def search
-    @restaurants = Restaurant.where("lower(name) LIKE ?", "%#{params[:query]}%")
+    @restaurants = Restaurant.where("name iLIKE '%#{params[:query]}%' OR cuisine iLIKE '%#{params[:query]}%'")
     render :search
   end
   
