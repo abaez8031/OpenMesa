@@ -27,5 +27,5 @@
 }
 
 .user-reservations-container {
-  overflow: scroll;
+  overflow: auto;
 }

@@ -179,7 +179,7 @@
   flex-direction: column;
   word-wrap: break-word;
   height: 50%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .delete-review-btn {
