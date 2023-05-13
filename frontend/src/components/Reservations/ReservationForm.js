@@ -16,7 +16,6 @@ const ReservationForm = () => {
   let reservation;
   const currentDate = new Date(year, month - 1, day).toISOString().split("T")[0]
   const nextHour = new Date().getHours() + 1
-  console.log(nextHour)
   const [date, setDate] = useState(currentDate);
   const [time, setTime] = useState(availableReservations[0])
   const [numOfGuests, setNumOfGuests] = useState(2);
