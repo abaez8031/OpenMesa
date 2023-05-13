@@ -75,8 +75,8 @@ const ReservationForm = () => {
     <div>
       
       {showCompleteResModal && <Modal onClose={() => {setShowCompleteResModal(false)
-        setDate("");
-        setTime("");
+        setDate(currentDate);
+        setTime(availableReservations[0]);
         setNumOfGuests(2)}}>
         <ReservationCompleteMessage props={{restaurant, time, date, numOfGuests}}/>
       </Modal>}
