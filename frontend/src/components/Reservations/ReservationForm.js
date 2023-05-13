@@ -16,6 +16,7 @@ const ReservationForm = () => {
   let reservation;
   const currentDate = new Date(year, month - 1, day).toISOString().split("T")[0]
   const nextHour = new Date().getHours() + 1
+  console.log(nextHour)
   const [date, setDate] = useState(currentDate);
   const [time, setTime] = useState(availableReservations[0])
   const [numOfGuests, setNumOfGuests] = useState(2);
@@ -33,8 +34,8 @@ const ReservationForm = () => {
   })
   
   if (date === currentDate) {
-    for(let i = nextHour; i >= 8 && i <= 16; i++) {
-      if(!reservations.some(reservation => reservation.time === i && reservation.date === date)) {
+    for(let i = nextHour; i <= 16; i++) {
+      if(!reservations.some(reservation => reservation.time === i && reservation.date === date) && i >= 8) {
         availableReservations.push(i)
       }
     }
