@@ -71,34 +71,55 @@ const ReservationEditForm = () => {
         {restaurant && (<h3>Update Reservation at {restaurant}</h3>)}
         <form className="edit-reservation-form" onSubmit={handleSubmit}>
           <label>Party Size:
-            <input
-              type="number"
-              min="2"
-              max="20"
-              value={numOfGuests}
-              onChange={(e) => setNumOfGuests(e.target.value)}
-              required
-            />
+          <select name="party-size" className="party-size-select" required onChange={(e) => setNumOfGuests(e.target.value)}>
+                <option value="1">1 person</option>
+                <option selected value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10">10 people</option>
+                <option value="11">11 people</option>
+                <option value="12">12 people</option>
+                <option value="13">13 people</option>
+                <option value="14">14 people</option>
+                <option value="15">15 people</option>
+                <option value="16">16 people</option>
+                <option value="17">17 people</option>
+                <option value="18">18 people</option>
+                <option value="19">19 people</option>
+                <option value="20">20 people</option>
+              </select>
           </label>
             
-          <label>Date:
-            <input
-              type="date"
-              value={date}
-              min={currentDate}
-              onChange={(e) => setDate(e.target.value)}
-              required
-            />
-          </label>
-            
-          {availableReservations.map((resTime,i) => (
-            <button className="edit-time-btn" key={i} value={resTime} onClick={(e) => {
-              e.preventDefault();
-              setTime(e.target.value)
-              }}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</button>
-          ))}
+          <div className="reservation-time-date-container">
+          <div className="reservation-date-select">
+          <label>Date:</label>
+          <input
+                type="date"
+                value={date}
+                min={currentDate}
+                onChange={(e) => setDate(e.target.value)}
+                required
+              />
+          </div>
+
+          <div className="reservation-time-select">
+            <label>Time:</label>
+          <select name="reservation-time" onChange={(e) => setTime(e.target.value)}>
+            <option selected disabled value={null}>Select a time</option>
+              {availableReservations.map(resTime => (
+            <option selected={time === resTime ? true : false} value={resTime}>{resTime > 12 ? `${resTime % 12}` : `${resTime}`}:00 {resTime >= 12 ?"PM" : "AM"}</option>
+                  ))}
+            {availableReservations.length === 0 && <option disabled>No more reservations available for this day</option>}
+          </select>
+          </div>
+          </div>
           
-          <button type="submit">Update Reservation</button>
+          <button className= "edit-res-button" type="submit">Update Reservation</button>
         </form>
       </div>)}
     </>
