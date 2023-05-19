@@ -2,6 +2,8 @@
 
 [Check out OpenMesa on Render!](https://openmesa.onrender.com/)
 
+<img width="1437" alt="Screenshot 2023-05-18 at 3 36 28 PM" src="https://github.com/abaez8031/OpenMesa/assets/113265748/6a0903e2-6c10-4148-ad92-1042bd14b5c3">
+
 ## Introduction
 
 OpenMesa is a clone of the OpenTable website. OpenTable is an online restaurant reservation platform that allows users to find and book tables at restaurants. Users can search for restaurants by a number of filters. OpenTable also provides reviews and ratings to help users make informed decisions about where to eat. The technologies implemented in this project include:
