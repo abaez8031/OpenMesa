@@ -210,7 +210,7 @@ Users are also allowed to update or delete reviews that they created.
 
 ## Reviews
 
-Users can search for restaurants for by name. There will be a list of restaurants matching the name rendered.
+Users can search for restaurants for by name or cuisine. There will be a list of restaurants matching the name/cuisine rendered.
 
 ![ezgif com-video-to-gif (5)](https://user-images.githubusercontent.com/113265748/232145166-27efafac-fa8d-4683-bbaf-1df065e52590.gif)
 
