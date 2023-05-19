@@ -217,9 +217,9 @@ Users can search for restaurants for by name. There will be a list of restaurant
 ```js
 
 def search
-  @restaurants = Restaurant.where("lower(name) LIKE ?", "%#{params[:query]}%")
-  render :search
-end
+    @restaurants = Restaurant.where("name iLIKE '%#{params[:query]}%' OR cuisine iLIKE '%#{params[:query]}%'")
+    render :search
+  end
 
 export const fetchSearchResults = (query) => async dispatch => {
   const res = await fetch(`/api/restaurants/search?query=${query}`);
