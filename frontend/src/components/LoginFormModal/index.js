@@ -3,7 +3,7 @@ import LoginForm from "./LoginForm";
 import { Modal } from "../../context/Modal";
 
 const LoginFormModal = () => {
-  const [showLoginModal, setShowLoginModal] = useState(false)
+  const [showLoginModal, setShowLoginModal] = useState(false);
   
   return (
     <>

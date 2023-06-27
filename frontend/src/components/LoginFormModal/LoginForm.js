@@ -13,7 +13,7 @@ const LoginForm = () => {
     setEmailAddress("example@gmail.com");
     setPassword('password');
     dispatch(sessionActions.login({emailAddress: "example@gmail.com", password: "password"}));
-  }
+  };
 
   
   const handleSubmit = (e) => {
